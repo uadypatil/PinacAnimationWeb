@@ -16,7 +16,21 @@
             color: #fff;
             overflow-x: hidden;
         }
+        nav {
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Vertically center items */
+            background-color: #333;
+            padding: 10px 20px;
+        }
 
+        /* Style for the p tag */
+        nav p {
+            color: #fff;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+        }
         header {
             background: rgba(0, 0, 0, 0.7);
             position: sticky;
@@ -24,30 +38,101 @@
             z-index: 10;
         }
 
-        header .navbar-brand {
-            font-size: 24px;
+        a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-item {
+    padding: 1rem 2rem;
+  color: #83818c;
+    position: relative;
+}
+
+.menu-item:before {
+    content: "";
+    height: 3px;
+    position: absolute;
+    background-color: #00ABC7;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover:before {
+    transform: scaleX(1);
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.menu-item:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    top: 60px;
+    transform: translateY(0px);
+}
+
+.submenu li {
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+.submenu li:hover {
+    background-color: #00ABC7;
+    color: black;
+    cursor: pointer;
+}
+        /* Style for dropdown menu */
+        .dropdown-menu {
+            background-col/or: rgba(0, 0, 0, 0.7);
+            border-radius: 0;
         }
 
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('image2.webp');
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            position: relative;
-            backdrop-filter: blur(5px) brightness(0.8);
+        /* Show dropdown on hover for large screens */
+        @media (min-width: 768px) {
+            .navbar-nav .nav-item:hover .dropdown-menu {
+                display: block;
+            }
         }
+
+        /* Ensure dropdown is hidden by default */
+        .dropdown-menu {
+            display: none;
+        }
+
 
         .carousel-item video {
             width: 100%;
             height: 100vh;
             object-fit: cover;
-            background: black;
         }
 
         .carousel-caption {
@@ -55,140 +140,118 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             text-align: center;
         }
 
-        /* Jumping effect on heading */
+         /* Heading Animation */
+            /* Heading with purple border around the text */
         .jumping-heading h2 {
             font-size: 48px;
             margin-bottom: 20px;
+            animation: jumpUpDown 1s ease-in-out infinite;
+            position: relative;
             display: inline-block;
-            animation: jumpUpDown 1s ease-in-out forwards; /* Runs once */
+            color: white; /* White text */
+            text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad; /* Purple text border */
         }
 
         .jumping-heading p {
             font-size: 18px;
             margin-bottom: 20px;
+            color: white; /* White text */
+            text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad; /* Purple text border */
         }
 
-        .carousel-caption button {
-            background: #ffd700;
-            color: #4e54c8;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
 
         /* Jump Up and Down Keyframe Animation */
-        .pa, h2 {
-            font-weight: 700;
-            text-align: center;
-            font-size: 40px;
-            font-family: Hack, sans-serif;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, rgb(22, 13, 56), rgb(13, 3, 29), #3e2a8c);
-            letter-spacing: 5px;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: 80%;
+        @keyframes jumpUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .pa {
+            font-size: 24px;
+            letter-spacing: 2px;
             animation: shine 5s linear infinite;
-            position: relative;
         }
 
         @keyframes shine {
-            0% {
-                background-position-x: -500%;
-            }
-            100% {
-                background-position-x: 500%;
-            }
+            0% { background-position: -500%; }
+            100% { background-position: 500%; }
         }
 
-        .navbar-nav {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .navbar-nav .nav-item {
+        .animated-button {
             position: relative;
-        }
-
-        .nav-link {
-            color: #fff !important;
-            padding: 15px 20px;
-            display: block;
-            text-decoration: none;
-        }
-
-        /* Remove bullets from sub-menu */
-        .navbar-nav .nav-item .sub-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid #8e44ad;
+            color: #fff;
             background-color: transparent;
-            min-width: 200px;
-            border-radius: 5px;
-            z-index: 100;
-            list-style: none; /* Remove bullets */
-            padding-left: 0;
+            cursor: pointer;
+            border-radius: 50px;
+            outline: none;
+            overflow: hidden;
+            transition: 0.4s ease-in-out;
+            box-shadow: 0 0 10px rgba(142, 68, 173, 0.7);
+            text-align: center;
         }
 
-        .navbar-nav .nav-item .sub-menu li {
-            padding: 10px 0px;
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            /* background: #8e44ad; */
+            transition: all 0.4s;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
         }
 
-        .navbar-nav .nav-item .sub-menu li a {
-            color: #fff !important;
-            text-decoration: none;
+        .animated-button:hover {
+            color: #fff;
+                        background: #8e44ad;
+
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(142, 68, 173, 1);
         }
 
-        .navbar-nav .nav-item:hover .sub-menu {
-            display: block;
+        .animated-button:hover::before {
+            width: 0;
+            height: 0;
         }
 
-        .sub-menu li:hover {
-            background: linear-gradient(90deg, rgba(74, 39, 120, 0.7), rgba(74, 39, 120, 0.5)); /* Purple gradient with transparency */
+        .animated-button span {
+            position: relative;
+            z-index: 1;
         }
 
-        /* Add some styling on hover for main nav items */
-        .navbar-nav .nav-item:hover > .nav-link {
-            background-color: #444;
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #8e44ad, 0 0 20px #8e44ad, 0 0 30px #8e44ad, 0 0 40px #8e44ad;
+            }
+
+            100% {
+                text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff, 0 0 35px #ff00ff, 0 0 50px #ff00ff;
+            }
         }
 
         .pinac {
-            background: linear-gradient(90deg, #4e54c8, #8f94fb); /* Purple to Blue gradient */
-            -webkit-background-clip: text; /* Ensures gradient is clipped to the text */
-            background-clip: text; /* For non-webkit browsers */
-            color: transparent; /* Make the text color transparent so that the gradient shows through */
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        /* Make the navbar and content more responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .carousel-caption h2 {
-                font-size: 36px;
-            }
-
-            .carousel-caption p {
-                font-size: 16px;
-            }
-
-            .carousel-item video {
-                height: 50vh;
-            }
-
-            .navbar-nav {
-                text-align: center;
-            }
-
-            .navbar-nav .nav-item {
-                padding: 5px;
-            }
+            .carousel-item video { height: 50vh; }
+            .carousel-caption h2 { font-size: 36px; }
+            .carousel-caption p { font-size: 16px; }
         }
     </style>
 </head>
@@ -196,89 +259,67 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand pinac" href="#">PINAC Animations</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Home</a>
-                        <!-- Sub-menu under Home -->
-                        <ul class="sub-menu">
-                            <li><a href="#subHome1">Sub Home 1</a></li>
-                            <li><a href="#subHome2">Sub Home 2</a></li>
-                            <li><a href="#subHome3">Sub Home 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses">Courses</a>
-                        <!-- Sub-menu under Courses -->
-                        <ul class="sub-menu">
-                            <li><a href="#course1">Course 1</a></li>
-                            <li><a href="#course2">Course 2</a></li>
-                            <li><a href="#course3">Course 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                        <!-- Sub-menu under Gallery -->
-                        <ul class="sub-menu">
-                            <li><a href="#gallery1">Gallery 1</a></li>
-                            <li><a href="#gallery2">Gallery 2</a></li>
-                            <li><a href="#gallery3">Gallery 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                        <!-- Sub-menu under Contact -->
-                        <ul class="sub-menu">
-                            <li><a href="#subContact1">Sub Contact 1</a></li>
-                            <li><a href="#subContact2">Sub Contact 2</a></li>
-                        </ul>
-                    </li>
+<nav>
+<p>PINAC ANIMATION</p>
+        <ul>
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#">About Me</a>
+                <ul class="submenu">
+                    <li>Education</li>
+                    <li>Experience</li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+            </li>
+            <li class="menu-item"><a href="#">Languages</a>
+                <ul class="submenu">
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Frameworks</a>
+                <ul class="submenu">
+                    <li>ExpressJs</li>
+                    <li>ReactJs</li>
+                    <li>Django</li>
+                    <li>Flask</li>
+                </ul>
+            </li>
+        </ul>
+        <button class="animated-button">Contact Us</button>
+        </nav>
+
 </header>
 
 <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
     <div class="carousel-inner">
-        <!-- Video Item -->
         <div class="carousel-item active">
             <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-17 at 3.21.49 PM.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4"
+ type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
                 <h2>Welcome to Animation</h2>
                 <p class="pa">Bring your imagination to life with our courses.</p>
-                <button class="btn btn-warning">Enroll Now</button>
+                <button class="animated-button">Enroll Now</button>
             </div>
         </div>
         <div class="carousel-item">
             <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4"type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="WhatsApp Video 2024-12-18 at 11.34.36 PM.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
-                <h2><span>Master</span> Animation</h2>
+                <h2>Master Animation</h2>
                 <p class="pa">Join our advanced courses and become an expert.</p>
-                <button class="btn btn-warning">Join the Course</button>
+                <button class="animated-button">Join the Course</button>
             </div>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
     </button>
 </div>
 
@@ -302,5 +343,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
