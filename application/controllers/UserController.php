@@ -15,12 +15,7 @@ class UserController extends CI_Controller
 
     function RegisterUser()
     {
-        // $name=$this->input->post("name");
-        // $age=$this->input->post("age");
-        // $contact=$this->input->post("contact");
-        // print_r($age);
-        // print_r($name);
-        // print_r($contact);
+        
         $formdata=$this->input->post();
         $data=array("name"=>$formdata["name"],"age"=>$formdata["age"]);
       
@@ -37,4 +32,5 @@ class UserController extends CI_Controller
         $this->UserModel->GetUserData();
     }
 }
+
 ?>
