@@ -7,6 +7,10 @@
     <title>Animation Class</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="<?php // echo base_url() . 'assets/css js/model.css'; 
+                                        ?>"> -->
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,6 +69,13 @@
             position: relative;
         }
 
+        /* navbar logo image */
+        .nav-logo-img {
+            filter: drop-shadow(1px 4px 2px rgba(255, 255, 255, 0.3));
+            /* display: inline-block; */
+        }
+
+        /* navbar logo image */
         .menu-item:before {
             content: "";
             height: 3px;
@@ -283,6 +294,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -331,14 +343,24 @@
         <p>From beginner to advanced levels, we have a course for everyone.</p>
     </section>
 
+
+
     <!-- Footer -->
-    <footer id="contact" class="text-center py-5">
-        <p>Contact Us</p>
-        <p>Email: info@animationclass.com</p>
-    </footer>
+    <?php $this->load->view("includes/footer") ?>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="<?php echo base_url() . 'assets/css js/model.js'; ?>"></script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'), {
+                backdrop: 'static', // Prevent closing by clicking outside
+                keyboard: false // Prevent closing with the Escape key
+            });
+            welcomeModal.show();
+        });
+    </script>
 
 </body>
 
