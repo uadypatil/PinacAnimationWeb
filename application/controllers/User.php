@@ -13,8 +13,8 @@ class User extends CI_Controller
         $this->load->view("user/index");
     }
 
-    function theme1(){
-        $this->load->view("theme/theme1");
+    function StudentGallery(){
+        $this->load->view("user/studentgallery");
     }
 
     function theme2(){

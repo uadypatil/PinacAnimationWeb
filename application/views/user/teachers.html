@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Profile Cards and Gallery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .mask-custom {
+      background: rgba(24, 24, 16, .2);
+      border-radius: 2em;
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 255, 255, 0.05);
+      background-clip: padding-box;
+      box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+
+    @media (max-width: 767px) {
+      .bg-image {
+        height: 500px !important;
+      }
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.33% - 10px);
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Profile Cards Section -->
+  <section>
+    <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg'); height: 700px;">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="card mask-custom py-5 text-white">
+                <div class="card-body">
+                  <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg" alt="avatar" style="width: 100px;">
+                  <h5 class="mb-4">Veronica Smith</h5>
+                  <p class="mb-4">Backend Developer</p>
+                  <ul class="list-unstyled mb-0">
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-github text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-twitter text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-linkedin-in text-white"></i>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="card mask-custom py-5 text-white">
+                <div class="card-body">
+                  <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 100px;">
+                  <h5 class="mb-4">Tom Johnson</h5>
+                  <p class="mb-4">Digital Marketing Analyst</p>
+                  <ul class="list-unstyled mb-0">
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-facebook-f text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-twitter text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-linkedin-in text-white"></i>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-0">
+              <div class="card mask-custom py-5 text-white">
+                <div class="card-body">
+                  <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" alt="avatar" style="width: 100px;">
+                  <h5 class="mb-4">Emma Lovelace</h5>
+                  <p class="mb-4">Web Designer</p>
+                  <ul class="list-unstyled mb-0">
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-dribbble text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-linkedin-in text-white"></i>
+                    </a>
+                    <a href="#!" class="px-1">
+                      <i class="fab fa-instagram text-white"></i>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 4">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 5">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="Image 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

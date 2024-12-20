@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['/'] = "/User/";
 
 $route['/theme'] = "/User/theme1";
+$route['studentgallery'] = "User/StudentGallery";
