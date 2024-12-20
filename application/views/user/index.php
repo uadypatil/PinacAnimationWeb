@@ -27,7 +27,6 @@
             padding: 10px 20px;
         }
 
-        /* Style for the p tag */
         nav p {
             color: #fff;
             font-size: 24px;
@@ -171,8 +170,6 @@
             /* Purple text border */
         }
 
-
-        /* Jump Up and Down Keyframe Animation */
         @keyframes jumpUpDown {
 
             0%,
@@ -226,7 +223,6 @@
             left: 50%;
             width: 300%;
             height: 300%;
-            /* background: #8e44ad; */
             transition: all 0.4s;
             border-radius: 50%;
             transform: translate(-50%, -50%);
@@ -246,28 +242,6 @@
             height: 0;
         }
 
-        .animated-button span {
-            position: relative;
-            z-index: 1;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px #8e44ad, 0 0 20px #8e44ad, 0 0 30px #8e44ad, 0 0 40px #8e44ad;
-            }
-
-            100% {
-                text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff, 0 0 35px #ff00ff, 0 0 50px #ff00ff;
-            }
-        }
-
-        .pinac {
-            background: linear-gradient(90deg, #4e54c8, #8f94fb);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .carousel-item video {
@@ -282,12 +256,269 @@
                 font-size: 16px;
             }
         }
+
+        /* Modal */
+        .modal-content {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+        }
+
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+
+        /* -----------------------GALLERY CSS----------------------- */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        /* Container to hold the gallery items */
+
+
+        .gallery-item {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item .card-body {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item .card-text {
+            font-size: 1rem;
+        }
+
+        /* Responsive for smaller devices */
+        @media (max-width: 768px) {
+            .gallery-item img {
+                height: 150px;
+            }
+
+            .gallery-item .card-body {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* -----------------------section css--------------------------- */
+        * Basic Structure */ .product-carousal .container {
+            max-width: 1035px;
+            margin: 0 auto;
+        }
+
+        /* Heading Styles */
+        .product-carousal-head h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #0A0F40;
+            margin-bottom: 20px;
+        }
+
+        .product-carousal-head p.bolder {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #A7B2BF;
+            margin-bottom: 40px;
+        }
+
+        /* Carousel Section */
+        .carousal-section {
+            margin-top: 40px;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            flex: 0 0 auto;
+            margin-right: 30px;
+            /* Space between slides */
+        }
+
+        .tile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Tile Card Content */
+        .tile-card .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .tile-card .col-md-6 {
+            padding: 20px;
+        }
+
+        .slider-graphic-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slider-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A0F40;
+            margin-bottom: 15px;
+        }
+
+        .slider-content p {
+            font-size: 16px;
+            color: #A7B2BF;
+            line-height: 1.6;
+        }
+
+        /* Hover Effect for Tile Cards */
+        .tile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Arrows */
+        .icon-left-arrow,
+        .icon-right-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .slider-arrow {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-left-arrow:hover .slider-arrow,
+        .icon-right-arrow:hover .slider-arrow {
+            transform: scale(1.1);
+        }
+
+        /* Mobile View: Product Titles */
+        @media (max-width: 768px) {
+            .product-carousal-head h1 {
+                font-size: 28px;
+            }
+
+            .product-carousal-head p.bolder {
+                font-size: 16px;
+            }
+
+            .tile-card {
+                margin-bottom: 20px;
+            }
+
+            .swiper-slide {
+                width: calc(100% - 20px);
+            }
+
+            .slider-content h2 {
+                font-size: 20px;
+            }
+
+            .slider-content p {
+                font-size: 14px;
+            }
+
+            .icon-left-arrow,
+            .icon-right-arrow {
+                display: block;
+            }
+        }
+
+        /* Styling for gradient text */
+        gradtxt {
+            color: #ff6f61;
+            /* Gradient color */
+            font-weight: bold;
+        }
+
+        /* Adding Smooth Transition for Carousel */
+        .swiper-container {
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 
 <body>
 
-    <?php $this->load->view("includes/navbar"); ?>
+    <header>
+        <nav>
+            <p>PINAC ANIMATION</p>
+            <ul>
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">About Me</a>
+                    <ul class="submenu">
+                        <li>Education</li>
+                        <li>Experience</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Languages</a>
+                    <ul class="submenu">
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Frameworks</a>
+                    <ul class="submenu">
+                        <li>ExpressJs</li>
+                        <li>ReactJs</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="animated-button">Contact Us</button>
+        </nav>
+
+    </header>
 
     <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
         <div class="carousel-inner">

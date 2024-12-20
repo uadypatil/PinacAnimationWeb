@@ -8,6 +8,7 @@ class UserController extends CI_Controller
     //     parent::__construct();
     // }
 
+    
     function AddUserForm()
     {
         $this->load->view("UserForm");
