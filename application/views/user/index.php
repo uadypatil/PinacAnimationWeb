@@ -114,25 +114,6 @@
             cursor: pointer;
         }
 
-        /* Style for dropdown menu */
-        .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 0;
-        }
-
-        /* Show dropdown on hover for large screens */
-        @media (min-width: 768px) {
-            .navbar-nav .nav-item:hover .dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Ensure dropdown is hidden by default */
-        .dropdown-menu {
-            display: none;
-        }
-
-
         .carousel-item video {
             width: 100%;
             height: 100vh;
@@ -148,7 +129,6 @@
         }
 
         /* Heading Animation */
-        /* Heading with purple border around the text */
         .jumping-heading h2 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -156,18 +136,14 @@
             position: relative;
             display: inline-block;
             color: white;
-            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
-            /* Purple text border */
         }
 
         .jumping-heading p {
             font-size: 18px;
             margin-bottom: 20px;
             color: white;
-            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
-            /* Purple text border */
         }
 
         @keyframes jumpUpDown {
@@ -182,22 +158,7 @@
             }
         }
 
-        .pa {
-            font-size: 24px;
-            letter-spacing: 2px;
-            animation: shine 5s linear infinite;
-        }
-
-        @keyframes shine {
-            0% {
-                background-position: -500%;
-            }
-
-            100% {
-                background-position: 500%;
-            }
-        }
-
+        /* Button */
         .animated-button {
             position: relative;
             padding: 15px 40px;
@@ -232,7 +193,6 @@
         .animated-button:hover {
             color: #fff;
             background: #8e44ad;
-
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(142, 68, 173, 1);
         }
@@ -489,43 +449,49 @@
 
     <header>
         <nav>
-            <p>PINAC ANIMATION</p>
+            <img src="pinac-removebg-preview.png" alt="Brand Logo" style="width:80px">
             <ul>
                 <li class="menu-item"><a href="#">Home</a></li>
-                <li class="menu-item"><a href="#">About Me</a>
+                <li class="menu-item"><a href="#">Student Gallery</a>
                     <ul class="submenu">
-                        <li>Education</li>
-                        <li>Experience</li>
+                        <li>Student Activities</li>
+                        <li>Events</li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="#">Languages</a>
+                <ul class="submenu">
+                    <li>Education</li>
+                    <li>Experience</li>
+                </ul>
+                </li>
+                <li class="menu-item"><a href="#">Courses</a>
                     <ul class="submenu">
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C/C++</li>
+                        <li>3D Animations</li>
+                        <li>VFX</li>
+                        <li>Gaming</li>
+                        <li>Multimedia</li>
+                        <li>Graphics Designing</li>
+                        <li>Video Editing</li>
+                        <li>Portfolio Development Program</li>
+                        <li>MotionoGraphy</li>
+
                     </ul>
                 </li>
-                <li class="menu-item"><a href="#">Frameworks</a>
+                <li class="menu-item"><a href="#">About Us</a>
                     <ul class="submenu">
-                        <li>ExpressJs</li>
-                        <li>ReactJs</li>
-                        <li>Django</li>
-                        <li>Flask</li>
+                        <li>Pinac Institute</li>
+                        <li>Meet Our Teachers</li>
                     </ul>
                 </li>
             </ul>
-            <button class="animated-button">Contact Us</button>
+            <button class="animated-button" data-bs-toggle="modal" data-bs-target="#addressModal">Show Address</button>
         </nav>
-
     </header>
 
     <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <video class="d-block w-100" autoplay muted loop>
-                    <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4"
-                        type="video/mp4">Your browser does not support the video tag.
+                    <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4" type="video/mp4">Your browser does not support the video tag.
                 </video>
                 <div class="carousel-caption jumping-heading">
                     <h2>Welcome to Animation</h2>
@@ -552,24 +518,236 @@
         </button>
     </div>
 
-    <!-- Content Sections -->
-    <section id="about" class="text-center py-5">
-        <h3>About Us</h3>
-        <p>We offer world-class animation courses to bring your creativity to life.</p>
-    </section>
-    <section id="courses" class="text-center py-5 bg-light">
-        <h3>Our Courses</h3>
-        <p>From beginner to advanced levels, we have a course for everyone.</p>
+    <!-- Modal for Address and Map -->
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="googleMap">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addressModalLabel">Our Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Address:</h5>
+                    <p>Pandit Colony, Nashik, Maharashtra, India</p>
+                    <p>Pin Code: 422002</p>
+
+                    <!-- Embedded Google Map -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4291.745453141256!2d73.7898!3d20.0000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf67f68a1d6db%3A0xa97a1eaa3fd0e36b!2sNashik%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1725395799894!5m2!1sen!2sin" width="400" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <h5>Contact Us:</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="card">
+        <h1 class="text-center pt-5 jumping-heading">Our Animations</h1>
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <!-- First Slide: Shows 3 images -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Gallery Item 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">HTML Tutorial</h5>
+                                    <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gallery Item 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">CSS Tutorial</h5>
+                                    <p class="card-text">Explore styling and layout techniques using CSS.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gallery Item 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">JavaScript Tutorial</h5>
+                                    <p class="card-text">Dive into JavaScript to create interactive websites.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Slide: Shows 3 images -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Gallery Item 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">HTML Tutorial</h5>
+                                    <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gallery Item 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">CSS Tutorial</h5>
+                                    <p class="card-text">Explore styling and layout techniques using CSS.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gallery Item 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="gallery-item">
+                                <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                                <div class="card-body">
+                                    <h5 class="card-title">JavaScript Tutorial</h5>
+                                    <p class="card-text">Dive into JavaScript to create interactive websites.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel Section -->
+    <section class="container mt-5">
+        <div class="carousal-section" data-aos="fade-up">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+
+
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 rounded-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="https://www.animaker.com/Animaker-Home/new-assets/hr-graphic.webp" alt="Human-resources" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                    <h2 class="h4 text-dark mb-3">Human Resources</h2>
+                                    <p class="text-muted">Make super appealing onboarding, orientation, and compliance videos in a jiffy! You don’t need to depend on professional video creators anymore.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 rounded-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="https://www.animaker.com/Animaker-Home/new-assets/Marketing-and-sales.webp" alt="Marketing-and-sales" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                    <h2 class="h4 text-dark mb-3">Marketers and Sales Professionals</h2>
+                                    <p class="text-muted">Make videos that make an impact both internally and externally. Create engaging video content to entice your followers and clients!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 rounded-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="https://www.animaker.com/Animaker-Home/new-assets/Internal-communications.webp" alt="Internal-communications" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                    <h2 class="h4 text-dark mb-3">Internal Communications</h2>
+                                    <p class="text-muted">Effective communication is essential for an empowering company culture. Guide your colleagues effectively with a well-crafted animated video!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 rounded-3">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="https://www.animaker.com/Animaker-Home/new-assets/Everyone-else.webp" alt="Animaker-video-creation-tool-for-everyone" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                    <h2 class="h4 text-dark mb-3">Everyone Else</h2>
+                                    <p class="text-muted">Be it a birthday wish, a wedding invite, or even a personal resume, Animaker has got you covered! Create anything you want, just the way you want!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="text-center py-5">
-        <p>Contact Us</p>
-        <p>Email: info@animationclass.com</p>
-    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.1.0/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Swiper Initialization
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                },
+                1024: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
 
 </body>
 

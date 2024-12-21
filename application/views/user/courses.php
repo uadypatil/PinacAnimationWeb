@@ -298,6 +298,428 @@
 <body>
 
     <?php $this->load->view("includes/navbar"); ?>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            max-width: 80%;
+            height: 80%;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* Sharp border */
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            /* Transparent dark background */
+            backdrop-filter: blur(15px);
+            /* Blur effect */
+            color: white;
+            /* White text for dark theme */
+            text-align: center;
+        }
+
+        .carousel-item video {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+
+        /* CSS */
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+
+        .glitch-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text {
+            position: relative;
+            /* font-size: 4rem; */
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            animation: glitch-animation 1.5s infinite;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            color: red;
+            z-index: -1;
+        }
+
+        .glitch-text::before {
+            color: red;
+            animation: glitch-before 1.5s infinite linear;
+        }
+
+        .glitch-text::after {
+            color: blue;
+            animation: glitch-after 1.5s infinite linear;
+        }
+
+        @keyframes glitch-animation {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-1px);
+            }
+
+            50% {
+                transform: translateX(1px);
+            }
+
+            75% {
+                transform: translateX(-0.5px);
+            }
+        }
+
+        @keyframes glitch-before {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-3px);
+            }
+
+            50% {
+                transform: translateX(3px);
+            }
+
+            75% {
+                transform: translateX(-2px);
+            }
+        }
+
+        @keyframes glitch-after {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(3px);
+            }
+
+            50% {
+                transform: translateX(-3px);
+            }
+
+            75% {
+                transform: translateX(2px);
+            }
+        }
+    </style>
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <!-- First Video with Blurred Card -->
+            <div class="carousel-item active">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/vfx.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="VFX">VFX</h1>
+                        </div>
+                        <!-- <p class="card-title fs-1">
+                            VFX
+                        </p> -->
+                        <p class="card-text fs-4">The Visual Effects (VFX) course trains individuals to create stunning visuals for films, games, and media. It focuses on blending real-world elements with computer-generated imagery. Students learn skills like compositing, particle effects, and CG integration. The course emphasizes hands-on training with industry-standard tools. Graduates are prepared for careers in entertainment and media production.</p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Covers digital design, compositing, CG integration, and advanced particle effects.</li>
+                            <li class="text-start">Includes practical projects to develop industry-relevant skills and a professional portfolio</li>
+                            <li class="text-start">Training on tools like Adobe After Effects, Autodesk Maya, and Foundry Nuke</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Video with Blurred Card -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="3D Animation">3D Animation</h1>
+                        </div>
+                        <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
+                        </p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
+                            <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
+                            <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Video with Blurred Card -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/gaming.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="Gaming">Gaming</h1>
+                        </div>
+                        <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum culpa fugit, veniam cum inventore veritatis ipsam id eligendi, nesciunt porro impedit quod quos nihil dolorum.
+                        </p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
+                            <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
+                            <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Second Video with Blurred Card -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="Graphics Designing">Graphics Designing</h1>
+                        </div>
+                        <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
+                        </p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
+                            <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
+                            <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Second Video with Blurred Card -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="Video Editing and Motion Graphics">Video Editing and Motion Graphics</h1>
+                        </div>
+                        <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
+                        </p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
+                            <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
+                            <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Second Video with Blurred Card -->
+            <div class="carousel-item">
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-overlay">
+                        <div class="glitch-container">
+                            <h1 class="glitch-text fs-1" data-text="Portfolio Development Program">Portfolio Development Program</h1>
+                        </div>
+                        <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
+                        </p>
+                        <ul class="mx-5 fs-5" style="">
+                            <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
+                            <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
+                            <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
+                        </ul>
+                        <hr>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
 
     <style>
         .all-courses {
