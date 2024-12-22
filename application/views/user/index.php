@@ -22,59 +22,122 @@
             color: #fff;
             overflow-x: hidden;
         }
-       
-     /* Centering navbar content */
-.navbar-nav {
-  text-align: center;
-}
 
-.navbar-collapse {
-  justify-content: center;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Space between items */
+            align-items: center;
+            /* Vertically center items */
+            background-color: #333;
+            padding: 10px 20px;
+        }
 
-/* Styling the navbar links */
-.navbar-nav .nav-link {
-  position: relative;
-  padding: 0.5rem 1.5rem;
-}
+        nav p {
+            color: #fff;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Underline effect on hover */
-.navbar-nav .nav-link:hover {
-  text-decoration: none;
-  border-bottom: 2px solid #00ABC7; /* Underline color */
-}
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-/* Customizing the dropdown behavior */
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  top: 35px;
-  transform: translateY(0);
-  transition: all 0.3s ease;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* For smaller screens, the dropdown should toggle on button click */
-@media (max-width: 991px) {
-  .navbar-nav .dropdown-menu {
-    display: none; /* Hide the dropdown by default */
-  }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+        }
 
-  .navbar-nav .dropdown-menu.show {
-    display: block;
-  }
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
 
-  .navbar-nav .nav-link {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-/* Change background color on hover for sublist items */
-.nav-item .dropdown-menu .dropdown-item:hover {
-  background-color: #00ABC7; /* Background color on hover */
-  color: #fff; /* Text color on hover */
-}
-/* --------------------------NAVBAR CSS ENDS HERE----------------------------- */
+        .menu-item {
+            padding: 1rem 2rem;
+            color: #83818c;
+            position: relative;
+        }
+
+        .menu-item:before {
+            content: "";
+            height: 3px;
+            position: absolute;
+            background-color: #00ABC7;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 8px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover:before {
+            transform: scaleX(1);
+        }
+
+        .submenu {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 35px;
+            width: 100%;
+            padding: 0;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(50px);
+            transition: all 0.5s ease;
+        }
+
+        .menu-item:hover .submenu {
+            visibility: visible;
+            opacity: 1;
+            top: 60px;
+            transform: translateY(0px);
+        }
+
+        .submenu li {
+            padding: 10px;
+            transition: all 1s ease;
+        }
+
+        .submenu li:hover {
+            background-color: #00ABC7;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* Style for dropdown menu */
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0;
+        }
+
+        /* Show dropdown on hover for large screens */
+        @media (min-width: 768px) {
+            .navbar-nav .nav-item:hover .dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Ensure dropdown is hidden by default */
+        .dropdown-menu {
+            display: none;
+        }
+
 
         .carousel-item video {
             width: 100%;
@@ -91,7 +154,6 @@
         }
 
         /* Heading Animation */
-        /* Heading with purple border around the text */
         .jumping-heading h2 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -99,18 +161,14 @@
             position: relative;
             display: inline-block;
             color: white;
-            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
-            /* Purple text border */
         }
 
         .jumping-heading p {
             font-size: 18px;
             margin-bottom: 20px;
             color: white;
-            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
-            /* Purple text border */
         }
 
         @keyframes jumpUpDown {
@@ -125,22 +183,7 @@
             }
         }
 
-        .pa {
-            font-size: 24px;
-            letter-spacing: 2px;
-            animation: shine 5s linear infinite;
-        }
-
-        @keyframes shine {
-            0% {
-                background-position: -500%;
-            }
-
-            100% {
-                background-position: 500%;
-            }
-        }
-
+        /* Button */
         .animated-button {
             position: relative;
             padding: 15px 40px;
@@ -175,7 +218,6 @@
         .animated-button:hover {
             color: #fff;
             background: #8e44ad;
-
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(142, 68, 173, 1);
         }
@@ -638,688 +680,90 @@
 </head>
 
 <body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!-- Left button for toggling -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <!-- Logo on the left -->
-    <img src="pinac-removebg-preview.png" alt="Brand Logo" style="width: 80px;" class="ms-3">
+    <header>
+        <nav>
+            <p>PINAC ANIMATION</p>
+            <ul>
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">About Me</a>
+                    <ul class="submenu">
+                        <li>Education</li>
+                        <li>Experience</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Languages</a>
+                    <ul class="submenu">
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Frameworks</a>
+                    <ul class="submenu">
+                        <li>ExpressJs</li>
+                        <li>ReactJs</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="animated-button">Contact Us</button>
+        </nav>
 
-    <!-- Navbar content, centered -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Student Gallery
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#activities">Student Activities</a></li>
-            <li><a class="dropdown-item" href="#eventsgallery">Events</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCourses" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownCourses">
-            <li><a class="dropdown-item" href="#threed">3D Animations</a></li>
-            <li><a class="dropdown-item" href="#vfxanimation">VFX</a></li>
-            <li><a class="dropdown-item" href="#gaming">Gaming</a></li>
-            <li><a class="dropdown-item" href="#">Multimedia</a></li>
-            <li><a class="dropdown-item" href="#">Graphics Designing</a></li>
-            <li><a class="dropdown-item" href="#">Video Editing</a></li>
-            <li><a class="dropdown-item" href="#">Portfolio Development Program</a></li>
-            <li><a class="dropdown-item" href="#">MotionoGraphy</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About Us
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
-            <li><a class="dropdown-item" href="#">Pinac Institute</a></li>
-            <li><a class="dropdown-item" href="#teachers">Meet Our Teachers</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
+    </header>
 
-<!-- --------------------------------------  navbar ends here---------------------------------------- -->
-<div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4" type="video/mp4">Your browser does not support the video tag.
-            </video>
-            <div class="carousel-caption jumping-heading">
-                <h2>Welcome to Animation</h2>
-                <p class="pa">Bring your imagination to life with our courses.</p>
-                <button class="animated-button">Enroll Now</button>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-18 at 11.34.36 PM.mp4" type="video/mp4">Your browser does not support the video tag.
-            </video>
-            <div class="carousel-caption jumping-heading">
-                <h2>Master Animation</h2>
-                <p class="pa">Join our advanced courses and become an expert.</p>
-                <button class="animated-button">Join the Course</button>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-</div>
-
-<!-- Modal for Address and Map -->
-<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" id="googleMap">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addressModalLabel">Our Address</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-    <h5>Address:</h5>
-    <p>Pandit Colony, Nashik, Maharashtra, India</p>
-    <p>Pin Code: 422002</p>
-
-    <!-- Embedded Google Map -->
-    <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4291.745453141256!2d73.7898!3d20.0000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf67f68a1d6db%3A0xa97a1eaa3fd0e36b!2sNashik%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1725395799894!5m2!1sen!2sin" width="400" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        </div>
-
-    <h5>Contact Us:</h5>
-    <form>
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-        </div>
-        <button class="btn btn-primary">Submit</button>
-    </form>
-</div>
-
-        </div>
-    </div>
-</div>
-
- <!-- Gallery Section -->
-  <div class="card">
-<h1 class="text-center pt-5 jumping-heading gaming-heading">Our Animations</h1>
-<div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner">
-        <!-- First Slide: Shows 3 images -->
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Gallery Item 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
-                        </div>
-                    </div>
+    <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="d-block w-100" autoplay muted loop>
+                    <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4"
+                        type="video/mp4">Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption jumping-heading">
+                    <h2>Welcome to Animation</h2>
+                    <p class="pa">Bring your imagination to life with our courses.</p>
+                    <button class="animated-button">Enroll Now</button>
                 </div>
-                <!-- Gallery Item 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">CSS Tutorial</h5>
-                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="carousel-item">
+                <video class="d-block w-100" autoplay muted loop>
+                    <source src="WhatsApp Video 2024-12-18 at 11.34.36 PM.mp4" type="video/mp4">Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption jumping-heading">
+                    <h2>Master Animation</h2>
+                    <p class="pa">Join our advanced courses and become an expert.</p>
+                    <button class="animated-button">Join the Course</button>
                 </div>
             </div>
         </div>
-        <!-- Second Slide: Shows 3 images -->
-        <div class="carousel-item">
-            <div class="row">
-                <!-- Gallery Item 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">CSS Tutorial</h5>
-                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-</div>
-    </div>
-<!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ -->
-   <!-- Carousel Section -->
-<!-- Carousel Section -->
-<!-- Carousel Section -->
-<section class="container mt-5">
-  <h1 class="text-center pt-5 jumping-heading gaming-heading">Our Assignments</h1>
-
-  <div class="carousal-section" data-aos="fade-up">
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="card shadow-sm border-0 rounded-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="https://www.animaker.com/Animaker-Home/new-assets/hr-graphic.webp" alt="Human-resources" class="img-fluid rounded-start">
-              </div>
-              <div class="col-md-6 d-flex flex-column justify-content-center p-4">
-                <h2 class="h4 text-dark mb-3">Human Resources</h2>
-                <p class="text-muted">Make super appealing onboarding, orientation, and compliance videos in a jiffy! You don’t need to depend on professional video creators anymore.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="card shadow-sm border-0 rounded-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="https://www.animaker.com/Animaker-Home/new-assets/Marketing-and-sales.webp" alt="Marketing-and-sales" class="img-fluid rounded-start">
-              </div>
-              <div class="col-md-6 d-flex flex-column justify-content-center p-4">
-                <h2 class="h4 text-dark mb-3">Marketers and Sales Professionals</h2>
-                <p class="text-muted">Make videos that make an impact both internally and externally. Create engaging video content to entice your followers and clients!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="card shadow-sm border-0 rounded-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="https://www.animaker.com/Animaker-Home/new-assets/Internal-communications.webp" alt="Internal-communications" class="img-fluid rounded-start">
-              </div>
-              <div class="col-md-6 d-flex flex-column justify-content-center p-4">
-                <h2 class="h4 text-dark mb-3">Internal Communications</h2>
-                <p class="text-muted">Effective communication is essential for an empowering company culture. Guide your colleagues effectively with a well-crafted animated video!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="card shadow-sm border-0 rounded-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="https://www.animaker.com/Animaker-Home/new-assets/Everyone-else.webp" alt="Animaker-video-creation-tool-for-everyone" class="img-fluid rounded-start">
-              </div>
-              <div class="col-md-6 d-flex flex-column justify-content-center p-4">
-                <h2 class="h4 text-dark mb-3">Everyone Else</h2>
-                <p class="text-muted">Be it a birthday wish, a wedding invite, or even a personal resume, Animaker has got you covered! Create anything you want, just the way you want!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
- <!-- Gallery Section -->
-<!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
-<section class="container py-5" id="threed">
-  <h2 class="text-center  mb-4 gaming-heading">Animated Photo Gallery</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <!-- Show only 6 images initially -->
-    <div class="col gallery-item p-4" id="image1" style="border:0;">
-      <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Desktop-animation-movies-wallpapers-download.jpg" class="gallery-img" alt="Image 1">
-    </div>
-    <div class="col gallery-item p-4" id="image2" style="border:0;">
-      <img src="https://media.timeout.com/images/101507247/image.jpg" class="gallery-img" alt="Image 2">
-    </div>
-    <div class="col gallery-item p-4" id="image3" style="border:0;">
-      <img src="https://damassets.autodesk.net/content/dam/autodesk/www/industry/3d-animation/create-beautiful-3d-animations-thumb-1204x677.jpg" class="gallery-img" alt="Image 3">
-    </div>
-    <div class="col gallery-item p-4" id="image4" style="border:0;">
-      <img src="https://damassets.autodesk.net/content/dam/autodesk/www/industry/3d-animation/create-beautiful-3d-animations-thumb-1204x677.jpg" class="gallery-img" alt="Image 4">
-    </div>
-    <div class="col gallery-item p-4" id="image5" style="border:0;">
-      <img src="https://th.bing.com/th/id/R.5e8b2986e534b6256148b36edc0184d2?rik=RDjNib%2bEoeBcZQ&riu=http%3a%2f%2ffc02.deviantart.net%2ffs71%2ff%2f2011%2f036%2fb%2f7%2fanimation_cel_7_by_nippy13-d38uj80.png&ehk=6LF%2fyTeAKi1PQP3SndbT4tLBLqN8Epg1HuEYJVS%2b068%3d&risl=1&pid=ImgRaw&r=0" class="gallery-img" alt="Image 5">
-    </div>
-    <div class="col gallery-item p-4" id="image6" style="border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 6">
+        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
     </div>
 
-    <!-- Hidden images (7 to 12) initially -->
-    <div class="col gallery-item p-4" id="image7" style="display: none;border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 7">
-    </div>
-    <div class="col gallery-item p-4" id="image8" style="display: none;border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 8">
-    </div>
-    <div class="col gallery-item p-4" id="image9" style="display: none;border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 9">
-    </div>
-    <div class="col gallery-item p-4" id="image10" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+10" class="gallery-img" alt="Image 10">
-    </div>
-    <div class="col gallery-item p-4" id="image11" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+11" class="gallery-img" alt="Image 11">
-    </div>
-    <div class="col gallery-item p-4" id="image12" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+12" class="gallery-img" alt="Image 12">
-    </div>
-  </div>
-
-  <!-- Show More and Show Less Buttons -->
-  <div class="text-center mt-4">
-    <button id="showMoreBtn" class="btn btn-light" onclick="showMore()">Show More</button>
-    <button id="showLessBtn" class="btn btn-light" onclick="showLess()" style="display: none;">Show Less</button>
-  </div>
-</section>
-
- 
-<!-- ----------------------------------------    TEACHER SECTION -------------------------------------------- -->
-  <!-- Profile Cards Section -->
-  <section id="teachers">
-
-  <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg'); height: 700px; background-size: cover;">
-  <h1 class="text-center pt-4 jumping-heading gaming-heading">Meet Our Teachers</h1>
-
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-4 mb-4">
-            <div class="card text-white py-5" style="background-color: #6f42c1;">
-              <div class="card-body">
-                <!-- Apply AOS to the image directly -->
-                <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="100">
-                <h5 class="mb-4">Veronica Smith</h5>
-                <p class="mb-4">Backend Developer</p>
-                <ul class="list-unstyled mb-0">
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-github text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-twitter text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-linkedin-in text-white"></i>
-                  </a>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card  text-white py-5" style="background-color: #6f42c1;">
-              <div class="card-body " >
-                <!-- Apply AOS to the image directly -->
-                <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="200">
-                <h5 class="mb-4">Tom Johnson</h5>
-                <p class="mb-4">Digital Marketing Analyst</p>
-                <ul class="list-unstyled mb-0">
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-facebook-f text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-twitter text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-linkedin-in text-white"></i>
-                  </a>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-0">
-            <div class="card  text-white py-5" style="background-color: #6f42c1;">
-              <div class="card-body " >
-                <!-- Apply AOS to the image directly -->
-                <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="300">
-                <h5 class="mb-4">Emma Lovelace</h5>
-                <p class="mb-4">Web Designer</p>
-                <ul class="list-unstyled mb-0">
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-dribbble text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-linkedin-in text-white"></i>
-                  </a>
-                  <a href="#!" class="px-1">
-                    <i class="fab fa-instagram text-white"></i>
-                  </a>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ---------------------------------------------------ACTIVITIES SECTION ------------------------------------ -->
-<!-- Gallery Section -->
-<section class="container my-5" id="activities">
-  <h2 class="text-center mb-4 gaming-heading">Student Activites</h2>
-  <div class="row g-4">
-    <div class="col-md-4" data-aos="fade-up">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 1">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6">
-      </div>
-    </div>
-  </div>
+    <!-- Content Sections -->
+    <section id="about" class="text-center py-5">
+        <h3>About Us</h3>
+        <p>We offer world-class animation courses to bring your creativity to life.</p>
+    </section>
+    <section id="courses" class="text-center py-5 bg-light">
+        <h3>Our Courses</h3>
+        <p>From beginner to advanced levels, we have a course for everyone.</p>
     </section>
 
-<!-- ----------------------------------------------------- EVENTS --------------------------------------- -->
-<!-- Gallery Section -->
-<section class="container my-5" id="eventsgallery">
-  <h2 class="text-center mb-4 gaming-heading">Student Events</h2>
-  <div class="row g-4">
-    <div class="col-md-4" data-aos="fade-up">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 1">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-      <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5">
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6">
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer id="contact" class="text-center py-5">
+        <p>Contact Us</p>
+        <p>Email: info@animationclass.com</p>
+    </footer>
 
-  <!-- VFX Section -->
-  <section class="vfx-background" >
-  <h2 class="text-center mb-4 gaming-heading">VFX</h2>
-
-    <!-- Background Video -->
-    <video class="d-block w-100" autoplay muted loop>
-      <source src="https://3dtrixs.com/wp-content/uploads/2024/06/3Dtrix-Ad-Film-10-Sec.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="container" id="vfxanimation">
-      <div class="row justify-content-center align-items-center" style="height: 100vh;">
-        <div class="col-12 text-center">
-          <!-- Floating Text -->
-          <h1 class="floating-text" data-aos="fade-up">Welcome to the VFX World</h1>
-
-          <!-- Description Text -->
-          <p class="fade-in mt-4" data-aos="fade-up" data-aos-delay="400">
-            Explore the power of animations and visual effects. In this section, you'll see different dynamic and engaging elements that react to user interactions.
-          </p>
-
-          <!-- Call to Action Button -->
-          <a href="#gallery" class="btn btn-lg btn-danger mt-4" data-aos="fade-up" data-aos-delay="600">
-            Explore Gallery
-          </a>
-        </div>
-      </div>
-
-      <!-- Hover Effect Image Gallery -->
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="800">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 1">
-        </div>
-        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1000">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 2">
-        </div>
-        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1200">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 3">
-        </div>
-        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1400">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 4">
-        </div>
-      </div>
-
-      <!-- Animated Circles -->
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-
-      <!-- Progress Bar -->
-      <div class="progress mt-5">
-        <div class="progress-bar" role="progressbar"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- -----------------------------------GAME ANIMATION SERVIVICES---------------------------- -->
-    <!-- Gaming Section -->
-  <section class="gaming-section" id="gaming">
-    <div class="container">
-      <!-- Section Heading -->
-      <h2 class="gaming-heading">Gaming Section</h2>
-
-      <!-- Video and Content Section -->
-      <div class="gaming-content">
-        <!-- Left Content (Text) -->
-        <div class="content-left">
-          <p class="lead" style="color:#FF4433">
-            Dive into the world of gaming where you experience a range of genres that challenge your skills 
-          </p>
-        </div>
-
-        <!-- Video -->
-        <div class="content-center">
-          <video class="gaming-video" controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Right Content (Text) -->
-        <div class="content-right">
-          <p class="lead" style="color:#FF4433">
-            Join our community of gamers who are constantly pushing the boundaries of virtual worlds. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <
-   
-  <video class="video" loop autoplay muted preload>
-                    <source src="/wp-content/themes/classy/video/tectancles.mp4" type="video/mp4">
-                </video>
-  <!-- AOS JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200, // Duration of animation in milliseconds
-      once: true, // Animation happens once when scrolling into view
-    });
-  </script>
-
-  <!-- AOS JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200, // Duration of animation in milliseconds
-      once: true, // Animation happens once when scrolling into view
-    });
-  </script>
-
-<!-- AOS JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // Duration of animation in milliseconds
-    once: true, // Animation only triggers once when scrolling
-  });
-</script>
-
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9.1.0/swiper-bundle.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function showMore() {
-      // Show the hidden images
-      for (let i = 7; i <= 12; i++) {
-        let img = document.getElementById("image" + i);
-        img.style.display = "block";
-      }
-
-      // Hide the "Show More" button and show the "Show Less" button
-      document.getElementById("showMoreBtn").style.display = "none";
-      document.getElementById("showLessBtn").style.display = "inline-block";
-    }
-
-    function showLess() {
-      // Hide images 7 to 12
-      for (let i = 7; i <= 12; i++) {
-        let img = document.getElementById("image" + i);
-        img.style.display = "none";
-      }
-
-      // Show the "Show More" button and hide the "Show Less" button
-      document.getElementById("showMoreBtn").style.display = "inline-block";
-      document.getElementById("showLessBtn").style.display = "none";
-    }
-</script>
-<script>
-    // Swiper Initialization
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 2,
-            },
-        },
-    });
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
