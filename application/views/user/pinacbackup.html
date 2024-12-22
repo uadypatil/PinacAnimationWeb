@@ -11,6 +11,8 @@
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -18,7 +20,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
             color: #fff;
             overflow-x: hidden;
         }
@@ -75,25 +77,6 @@
   color: #fff; /* Text color on hover */
 }
 /* --------------------------NAVBAR CSS ENDS HERE----------------------------- */
-
-        /* Style for dropdown menu */
-        .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 0;
-        }
-
-        /* Show dropdown on hover for large screens */
-        @media (min-width: 768px) {
-            .navbar-nav .nav-item:hover .dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Ensure dropdown is hidden by default */
-        .dropdown-menu {
-            display: none;
-        }
-
 
         .carousel-item video {
             width: 100%;
@@ -652,7 +635,82 @@
         flex: none;
         margin-bottom: 20px;
       }
-    }    
+    } 
+    /* -------------------------------------Multimedia CSS-------------------------------------------    */
+    
+    /* Text animation */
+    .animated-text {
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* Image Hover Animation */
+    .image-container {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .image-container:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Keyframe for text fade-in */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Video embed responsive */
+    .video-embed {
+      position: relative;
+      padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Card Image responsive for small screens */
+    .card-img-top {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Ensure container content is properly spaced and centered on all screen sizes */
+    .container {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+
+    /* -----------------------------------HEADING CSS----------------------------------- */
+     /* Adding a blinking cursor effect */
+     .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: black;
+      animation: blink 0.7s infinite step-end;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
     </style>
 </head>
 
@@ -716,7 +774,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4" type="video/mp4">Your browser does not support the video tag.
+                <source src="https://assets.mixkit.co/videos/32982/32982-720.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
                 <h2>Welcome to Animation</h2>
@@ -726,7 +784,7 @@
         </div>
         <div class="carousel-item">
             <video class="d-block w-100" autoplay muted loop>
-                <source src="WhatsApp Video 2024-12-18 at 11.34.36 PM.mp4" type="video/mp4">Your browser does not support the video tag.
+                <source src="https://assets.mixkit.co/videos/18140/18140-720.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
                 <h2>Master Animation</h2>
@@ -786,8 +844,10 @@
 
  <!-- Gallery Section -->
   <div class="card">
-<h1 class="text-center pt-5 jumping-heading gaming-heading">Our Animations</h1>
-<div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <h3 id="typing-effect" class="text-center pt-5" style=" font-weight: bold;"></h3>
+
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
     <div class="carousel-inner">
         <!-- First Slide: Shows 3 images -->
         <div class="carousel-item active">
@@ -798,35 +858,83 @@
                         <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
                         <div class="card-body">
                             <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
+                            <p class="card-text pa">Learn the basics of HTML and how to build a webpage.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS Tutorial</h5>
+                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <video class="d-block w-100" autoplay muted loop>
-                    <source src="WhatsApp Video 2024-12-18 at 11.34.36 PM.mp4" type="video/mp4">Your browser does not support the video tag.
-                </video>
-                <div class="carousel-caption jumping-heading">
-                    <h2>Master Animation</h2>
-                    <p class="pa">Join our advanced courses and become an expert.</p>
-                    <button class="animated-button">Join the Course</button>
+        </div>
+        <!-- Second Slide: Shows 3 images -->
+        <div class="carousel-item">
+            <div class="row">
+                <!-- Gallery Item 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML Tutorial</h5>
+                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS Tutorial</h5>
+                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+    </div>
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
     </div>
 <!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ -->
    <!-- Carousel Section -->
 <!-- Carousel Section -->
 <!-- Carousel Section -->
 <section class="container mt-5">
-  <h1 class="text-center pt-5 jumping-heading gaming-heading">Our Assignments</h1>
+  <h1 class="text-center pt-5 typing-effect" style="color:purple">Our Assignments</h1>
 
   <div class="carousal-section" data-aos="fade-up">
     <!-- Slider main container -->
@@ -898,7 +1006,7 @@
  <!-- Gallery Section -->
 <!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
 <section class="container py-5" id="threed">
-  <h2 class="text-center  mb-4 gaming-heading">Animated Photo Gallery</h2>
+  <h3 class="text-center  mb-4 typing-effect" style="color:purple">Animated Photo Gallery</h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Show only 6 images initially -->
     <div class="col gallery-item p-4" id="image1" style="border:0;">
@@ -953,7 +1061,8 @@
   <!-- Profile Cards Section -->
   <section id="teachers">
 
-  <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg'); height: 700px; background-size: cover;">
+  <div class="bg-image" style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+; height: 700px; background-size: cover;">
   <h1 class="text-center pt-4 jumping-heading gaming-heading">Meet Our Teachers</h1>
 
     <div class="mask d-flex align-items-center h-100">
@@ -1162,44 +1271,102 @@
 
 
   <!-- -----------------------------------GAME ANIMATION SERVIVICES---------------------------- -->
-    <!-- Gaming Section -->
-  <section class="gaming-section" id="gaming">
-    <div class="container">
-      <!-- Section Heading -->
-      <h2 class="gaming-heading">Gaming Section</h2>
+    
+  <!-- ----------------------------------------GAMING SECTION------------------------------------- -->
+ <!-- Background Video Section -->
+ <div class="position-relative overflow-hidden pt-4">
+    <video class="w-100" autoplay muted loop>
+      <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" type="video/mp4" >
+      Your browser does not support the video tag.
+    </video>
 
-      <!-- Video and Content Section -->
-      <div class="gaming-content">
-        <!-- Left Content (Text) -->
-        <div class="content-left">
-          <p class="lead" style="color:#FF4433">
-            Dive into the world of gaming where you experience a range of genres that challenge your skills 
-          </p>
+    <!-- Text Overlay -->
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="display-3 fw-bold text-shadow">Welcome to the Gaming World</h1>
+      <p class="lead text-shadow">Explore the best gaming videos and tutorials</p>
+      <button class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="setVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        Watch Video
+      </button>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="videoModalLabel">Gaming Video</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
-        <!-- Video -->
-        <div class="content-center">
-          <video class="gaming-video" controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Right Content (Text) -->
-        <div class="content-right">
-          <p class="lead" style="color:#FF4433">
-            Join our community of gamers who are constantly pushing the boundaries of virtual worlds. 
-          </p>
+        <div class="modal-body">
+          <iframe class="w-100" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <
+  <!-- ----------------------------------------MULTIMEDIA ANIMATION ----------------------------- -->
    
-  <video class="video" loop autoplay muted preload>
-                    <source src="/wp-content/themes/classy/video/tectancles.mp4" type="video/mp4">
-                </video>
+  <!-- Header Section with Animated Text -->
+  <div class="container text-center py-5">
+    <h1 class="animated-text display-4">Welcome to the Multimedia World</h1>
+    <p class="lead animated-text">Experience stunning animations, images, and videos with a purple-themed design!</p>
+  </div>
+
+  <!-- Multimedia Section -->
+  <div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <!-- Image 1 with Hover Animation -->
+      <div class="col">
+        <div class="card image-container">
+          <img src="https://motiongility.com/wp-content/uploads/2023/08/Role-of-animation-in-boosting-us-1-768x432.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Image 1</h5>
+            <p class="card-text">A beautiful visual representation of multimedia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 2 with Hover Animation -->
+      <div class="col">
+        <div class="card image-container">
+          <img src="https://motiongility.com/wp-content/uploads/2023/08/Multimedia-Animation-01-1-1-1.png" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Image 2</h5>
+            <p class="card-text">Another stunning multimedia graphic for your experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video with Animation -->
+      <div class="col">
+        <div class="card">
+          <div class="video-embed">
+            <iframe src="https://youtu.be/22VjkLHco6o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Video 1</h5>
+            <p class="card-text">Watch this amazing gaming video right now!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function setVideo(url) {
+      const iframe = document.querySelector('.modal-body iframe');
+      iframe.src = url;
+    }
+  </script>
+<!-- -------------------------------------------------------END------------------------------------------------ -->
+ 
   <!-- AOS JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -1233,6 +1400,56 @@
   });
 </script>
 
+<!-- ------------------------------heading animations--------------------------- -->
+<script>
+  // Function to trigger the typing effect
+  function triggerTypingEffect(element) {
+    const text = element.getAttribute('data-text'); // Get the original text from the data-text attribute
+    let index = 0;
+    let content = '';
+
+    // Function to add one character at a time
+    function typeLetter() {
+      if (index < text.length) {
+        content += text.charAt(index);  // Add one character at a time
+        element.innerHTML = `<span class="typing-container">${content}<span class="cursor"></span></span>`; // Add cursor
+        index++;
+        setTimeout(typeLetter, 150);  // Adjust the speed here
+      } else {
+        element.innerHTML = `<span class="typing-container">${content}</span>`;  // Remove cursor when typing is done
+      }
+    }
+
+    // Start typing effect
+    typeLetter();
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.typing-effect'); // Get all elements with 'typing-effect' class
+
+    // Store the original text in a custom data attribute (data-text) to avoid losing it
+    elements.forEach(function(element) {
+      element.setAttribute('data-text', element.textContent.trim()); // Store original text
+      element.textContent = '';  // Clear text content for typing effect
+    });
+
+    // Set up Intersection Observer to trigger typing when the element is in view
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Reset the text content to start typing effect again
+          entry.target.textContent = ''; // Clear content to reset typing
+          triggerTypingEffect(entry.target); // Trigger the typing effect
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is in view
+
+    // Start observing each element with the typing effect class
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+</script>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9.1.0/swiper-bundle.min.js"></script>

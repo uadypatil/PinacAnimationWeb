@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -53,7 +53,44 @@ $route['default_controller'] = 'User';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['/'] = "/User/";
+// route to load index function in user controller
+$route[''] = "/User/index";
 
-$route['/theme'] = "/User/theme1";
-$route['studentgallery'] = "User/StudentGallery";
+// route to load courses page
+$route['courses'] = "/User/Courses";
+
+// route to load 3danimation course page
+// $route['/3danimation'] = "/User/Animation3D";
+
+// // route to load gaming 
+// $route['/gaming'] = "/User/Gaming";
+
+// // route to load graphics designing
+// $route['/graphicsdesigning'] = "/User/GraphicsDesigning";
+
+// // route to load portfolio development
+// $route['/Portfolio'] = "/User/PortfolioDevelopment";
+
+// // route to load vfx page
+// $route['/vfx'] = "/User/VFX";
+
+// // route to load video editing page
+// $route['/videoediting'] = "/User/VideoEditing";
+
+// route to load student gallery page
+$route['studentgallery'] = "/User/StudentGallery";
+
+// route to load activities page
+// $route['/activities'] = "/User/Activities";
+
+// // route to load events page
+// $route['/events'] = "/User/Events";
+
+// // route to load testinomials page
+// $route['/testinomials'] = "/User/Testinomials";
+
+// route to load about us page
+$route['aboutus'] = "/User/AboutUs";
+
+// route to load contact us page
+$route['contactus'] = "/User/ContactUs";

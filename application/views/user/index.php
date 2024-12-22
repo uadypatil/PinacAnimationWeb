@@ -91,6 +91,7 @@
         }
 
         /* Heading Animation */
+        /* Heading with purple border around the text */
         .jumping-heading h2 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -98,22 +99,48 @@
             position: relative;
             display: inline-block;
             color: white;
+            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
+            /* Purple text border */
         }
 
         .jumping-heading p {
             font-size: 18px;
             margin-bottom: 20px;
             color: white;
+            /* White text */
             text-shadow: 0 0 5px #8e44ad, 0 0 10px #8e44ad, 0 0 15px #8e44ad, 0 0 20px #8e44ad;
+            /* Purple text border */
         }
 
         @keyframes jumpUpDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
-        /* Button */
+        .pa {
+            font-size: 24px;
+            letter-spacing: 2px;
+            animation: shine 5s linear infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: -500%;
+            }
+
+            100% {
+                background-position: 500%;
+            }
+        }
+
         .animated-button {
             position: relative;
             padding: 15px 40px;
@@ -148,6 +175,7 @@
         .animated-button:hover {
             color: #fff;
             background: #8e44ad;
+
             transform: scale(1.1);
             box-shadow: 0 0 20px rgba(142, 68, 173, 1);
         }
@@ -159,9 +187,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .carousel-item video { height: 50vh; }
-            .carousel-caption h2 { font-size: 36px; }
-            .carousel-caption p { font-size: 16px; }
+            .carousel-item video {
+                height: 50vh;
+            }
+
+            .carousel-caption h2 {
+                font-size: 36px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+            }
         }
 
         /* Modal */
@@ -175,8 +211,9 @@
             height: 400px;
             width: 100%;
         }
-/* -----------------------GALLERY CSS----------------------- */
-@keyframes backgroundAnimation {
+
+        /* -----------------------GALLERY CSS----------------------- */
+        @keyframes backgroundAnimation {
             0% {
                 background-position: 0 0;
             }
@@ -191,7 +228,7 @@
         }
 
         /* Container to hold the gallery items */
-     
+
 
         .gallery-item {
             border: 2px solid #fff;
@@ -241,6 +278,7 @@
                 font-size: 0.85rem;
             }
         }
+
         /* -----------------------section css--------------------------- */
 /* * Basic Structure */ */
 .product-carousal .container {
@@ -248,101 +286,102 @@
     margin: 0 auto;
 }
 
-/* Heading Styles */
-.product-carousal-head h1 {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    color: #0A0F40;
-    margin-bottom: 20px;
-}
+        /* Heading Styles */
+        .product-carousal-head h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #0A0F40;
+            margin-bottom: 20px;
+        }
 
-.product-carousal-head p.bolder {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    color: #A7B2BF;
-    margin-bottom: 40px;
-}
+        .product-carousal-head p.bolder {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #A7B2BF;
+            margin-bottom: 40px;
+        }
 
-/* Carousel Section */
-.carousal-section {
-    margin-top: 40px;
-}
+        /* Carousel Section */
+        .carousal-section {
+            margin-top: 40px;
+        }
 
-.swiper-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
+        .swiper-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
 
-.swiper-slide {
-    width: 100%;
-    flex: 0 0 auto;
-    margin-right: 30px; /* Space between slides */
-}
+        .swiper-slide {
+            width: 100%;
+            flex: 0 0 auto;
+            margin-right: 30px;
+            /* Space between slides */
+        }
 
-.tile-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .tile-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Tile Card Content */
-.tile-card .row {
-    display: flex;
-    align-items: center;
-}
+        /* Tile Card Content */
+        .tile-card .row {
+            display: flex;
+            align-items: center;
+        }
 
-.tile-card .col-md-6 {
-    padding: 20px;
-}
+        .tile-card .col-md-6 {
+            padding: 20px;
+        }
 
-.slider-graphic-img {
-    width: 100%;
-    border-radius: 10px;
-}
+        .slider-graphic-img {
+            width: 100%;
+            border-radius: 10px;
+        }
 
-.slider-content h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0A0F40;
-    margin-bottom: 15px;
-}
+        .slider-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A0F40;
+            margin-bottom: 15px;
+        }
 
-.slider-content p {
-    font-size: 16px;
-    color: #A7B2BF;
-    line-height: 1.6;
-}
+        .slider-content p {
+            font-size: 16px;
+            color: #A7B2BF;
+            line-height: 1.6;
+        }
 
-/* Hover Effect for Tile Cards */
-.tile-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
+        /* Hover Effect for Tile Cards */
+        .tile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
 
-/* Arrows */
-.icon-left-arrow,
-.icon-right-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
+        /* Arrows */
+        .icon-left-arrow,
+        .icon-right-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
 
-.slider-arrow {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
+        .slider-arrow {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
 
-.icon-left-arrow:hover .slider-arrow,
-.icon-right-arrow:hover .slider-arrow {
-    transform: scale(1.1);
-}
+        .icon-left-arrow:hover .slider-arrow,
+        .icon-right-arrow:hover .slider-arrow {
+            transform: scale(1.1);
+        }
 
 /* Mobile View: Product Titles */
 @media (max-width: 768px) {
@@ -413,11 +452,12 @@
     }
 }
 
-/* Styling for gradient text */
-gradtxt {
-    color: #ff6f61; /* Gradient color */
-    font-weight: bold;
-}
+        /* Styling for gradient text */
+        gradtxt {
+            color: #ff6f61;
+            /* Gradient color */
+            font-weight: bold;
+        }
 
 /* Adding Smooth Transition for Carousel */
 .swiper-container {

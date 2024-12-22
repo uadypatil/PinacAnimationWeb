@@ -22,11 +22,24 @@
             color: #fff;
             overflow-x: hidden;
         }
+
        
      /* Centering navbar content */
 .navbar-nav {
   text-align: center;
 }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Space between items */
+            align-items: center;
+            /* Vertically center items */
+            background-color: #333;
+            padding: 10px 20px;
+        }
+>>>>>>> 2965383304be74fcb0a0942dc6b473dcccc5a87e
 
 .navbar-collapse {
   justify-content: center;
@@ -299,11 +312,18 @@
         }
 
         /* -----------------------section css--------------------------- */
+
 /* * Basic Structure */ */
 .product-carousal .container {
     max-width: 1035px;
     margin: 0 auto;
 }
+
+        * Basic Structure */ .product-carousal .container {
+            max-width: 1035px;
+            margin: 0 auto;
+        }
+
 
         /* Heading Styles */
         .product-carousal-head h1 {
@@ -402,6 +422,7 @@
             transform: scale(1.1);
         }
 
+
 /* Mobile View: Product Titles */
 @media (max-width: 768px) {
     /* Adjust heading font size for smaller screens */
@@ -471,12 +492,46 @@
     }
 }
 
+        /* Mobile View: Product Titles */
+        @media (max-width: 768px) {
+            .product-carousal-head h1 {
+                font-size: 28px;
+            }
+
+            .product-carousal-head p.bolder {
+                font-size: 16px;
+            }
+
+            .tile-card {
+                margin-bottom: 20px;
+            }
+
+            .swiper-slide {
+                width: calc(100% - 20px);
+            }
+
+            .slider-content h2 {
+                font-size: 20px;
+            }
+
+            .slider-content p {
+                font-size: 14px;
+            }
+
+            .icon-left-arrow,
+            .icon-right-arrow {
+                display: block;
+            }
+        }
+
+
         /* Styling for gradient text */
         gradtxt {
             color: #ff6f61;
             /* Gradient color */
             font-weight: bold;
         }
+
 
 /* Adding Smooth Transition for Carousel */
 .swiper-container {
@@ -653,10 +708,17 @@
         margin-bottom: 20px;
       }
     }    
+
+        /* Adding Smooth Transition for Carousel */
+        .swiper-container {
+            transition: transform 0.3s ease;
+        }
+
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Left button for toggling -->
@@ -801,6 +863,53 @@
                             <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
                         </div>
                     </div>
+
+
+    <header>
+        <nav>
+            <p>PINAC ANIMATION</p>
+            <ul>
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">About Me</a>
+                    <ul class="submenu">
+                        <li>Education</li>
+                        <li>Experience</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Languages</a>
+                    <ul class="submenu">
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Frameworks</a>
+                    <ul class="submenu">
+                        <li>ExpressJs</li>
+                        <li>ReactJs</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="animated-button">Contact Us</button>
+        </nav>
+
+    </header>
+
+    <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="d-block w-100" autoplay muted loop>
+                    <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4"
+                        type="video/mp4">Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption jumping-heading">
+                    <h2>Welcome to Animation</h2>
+                    <p class="pa">Bring your imagination to life with our courses.</p>
+                    <button class="animated-button">Enroll Now</button>
+
                 </div>
             </div>
             <div class="carousel-item">
@@ -821,6 +930,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
+<<<<<<< HEAD
 <!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ -->
    <!-- Carousel Section -->
 <!-- Carousel Section -->
@@ -1291,6 +1401,27 @@
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+=======
+
+    <!-- Content Sections -->
+    <section id="about" class="text-center py-5">
+        <h3>About Us</h3>
+        <p>We offer world-class animation courses to bring your creativity to life.</p>
+    </section>
+    <section id="courses" class="text-center py-5 bg-light">
+        <h3>Our Courses</h3>
+        <p>From beginner to advanced levels, we have a course for everyone.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="text-center py-5">
+        <p>Contact Us</p>
+        <p>Email: info@animationclass.com</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
