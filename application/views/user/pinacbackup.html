@@ -20,7 +20,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
             color: #fff;
             overflow-x: hidden;
         }
@@ -711,6 +710,35 @@
         opacity: 0;
       }
     }
+
+    /* -------------------------------ANOMATIONS------------------------ */
+       .scrolling-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scrolling-images {
+      display: flex;
+      animation: scrollImages 20s linear infinite;
+    }
+
+    .scrolling-images img {
+      width: 200px; /* Adjust the image size */
+      height: auto;
+      margin-right: 20px; /* Space between images */
+      border-radius: 50%;
+    }
+
+    /* Animation to scroll images continuously */
+    @keyframes scrollImages {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
     </style>
 </head>
 
@@ -844,97 +872,108 @@
 
  <!-- Gallery Section -->
   <div class="card">
-    <h3 id="typing-effect" class="text-center pt-5" style=" font-weight: bold;"></h3>
-
-
-    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner">
-        <!-- First Slide: Shows 3 images -->
-        <div class="carousel-item active">
-            <div class="row">
-                <!-- Gallery Item 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text pa">Learn the basics of HTML and how to build a webpage.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">CSS Tutorial</h5>
-                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Second Slide: Shows 3 images -->
-        <div class="carousel-item">
-            <div class="row">
-                <!-- Gallery Item 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305182658/HTML-tutorial.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230427130955/CSS-Tutorial.webp" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">CSS Tutorial</h5>
-                            <p class="card-text">Explore styling and layout techniques using CSS.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="gallery-item">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230305183140/Javascript.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h3 id="typing-effect" class="text-center pt-5" style=" font-weight: bold;">Animations</h3>
+    <div class="scrolling-wrapper">
+      <div class="scrolling-images">
+        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" alt="Image 1">
+        <img src="https://wallpaperaccess.com/full/1346596.jpg" alt="Image 2">
+        <img src="https://wallpaperaccess.com/full/1346596.jpg" alt="Image 3">
+        <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Image 4">
+        <img src="https://via.placeholder.com/300x200?text=Image+5" alt="Image 5">
+      </div>
     </div>
+
+    <!-- <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner"> -->
+        <!-- First Slide: Shows 3 images -->
+        <!-- <div class="carousel-item active">
+            <div class="row"> -->
+                <!-- Gallery Item 1 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" class="card-img-top" alt="HTML Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">HTML Tutorial</h5>
+                            <p class="card-text pa">Learn the basics of HTML and how to build a webpage.</p> -->
+                        <!-- </div>
+                    </div>
+                </div> -->
+                <!-- Gallery Item 2 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="CSS Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">CSS Tutorial</h5>
+                            <p class="card-text">Explore styling and layout techniques using CSS.</p> -->
+                        <!-- </div>
+                    </div>
+                </div> -->
+                <!-- Gallery Item 3 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://images.squarespace-cdn.com/content/v1/508e7487e4b047ba54daaef2/1648467721123-44E9JHIXR47S55IC6M3R/Vinyl+Collector+by+Sarah+Jarrettsm.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p> -->
+                        <!-- </div>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
+        <!-- Second Slide: Shows 3 images -->
+        <!-- <div class="carousel-item">
+            <div class="row"> -->
+                <!-- Gallery Item 4 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="HTML Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">HTML Tutorial</h5>
+                            <p class="card-text">Learn the basics of HTML and how to build a webpage.</p> -->
+                        <!-- </div>
+                    </div>
+                </div> -->
+                <!-- Gallery Item 5 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://images.squarespace-cdn.com/content/v1/508e7487e4b047ba54daaef2/1648467721123-44E9JHIXR47S55IC6M3R/Vinyl+Collector+by+Sarah+Jarrettsm.jpg" class="card-img-top" alt="CSS Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">CSS Tutorial</h5>
+                            <p class="card-text">Explore styling and layout techniques using CSS.</p> -->
+                        <!-- </div>
+                    </div>
+                </div> -->
+                <!-- Gallery Item 6 -->
+                <!-- <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body"> -->
+                            <!-- <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p> -->
+                        <!-- </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+    <!-- </button>
     <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
-</div>
+</div> -->
     </div>
 <!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ -->
    <!-- Carousel Section -->
 <!-- Carousel Section -->
 <!-- Carousel Section -->
+<div class="card">
+  <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+  ">
 <section class="container mt-5">
-  <h1 class="text-center pt-5 typing-effect" style="color:purple">Our Assignments</h1>
+  <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Our Assignments</h3>
 
   <div class="carousal-section" data-aos="fade-up">
     <!-- Slider main container -->
@@ -1001,12 +1040,13 @@
     </div>
   </div>
 </section>
+</div>
+</div>
 
 <!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
- <!-- Gallery Section -->
-<!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
+<!-- Gallery Section -->
 <section class="container py-5" id="threed">
-  <h3 class="text-center  mb-4 typing-effect" style="color:purple">Animated Photo Gallery</h3>
+  <h3 class="text-center pt-5 typing-effect" style="color:#61a0e7">Animated Photo Gallery</h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Show only 6 images initially -->
     <div class="col gallery-item p-4" id="image1" style="border:0;">
@@ -1056,19 +1096,16 @@
   </div>
 </section>
 
- 
 <!-- ----------------------------------------    TEACHER SECTION -------------------------------------------- -->
-  <!-- Profile Cards Section -->
-  <section id="teachers">
-
-  <div class="bg-image" style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
-; height: 700px; background-size: cover;">
-  <h1 class="text-center pt-4 jumping-heading gaming-heading">Meet Our Teachers</h1>
+<!-- Profile Cards Section -->
+<div class="bg-image" style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a); height: 700px; background-size: cover;">
+  <h3 class="text-center pt-4 typing-effect" style="color:#ffffff">Meet Our Teachers</h3>
+<section id="teachers" class="p-0">
 
     <div class="mask d-flex align-items-center h-100">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4">
             <div class="card text-white py-5" style="background-color: #6f42c1;">
               <div class="card-body">
                 <!-- Apply AOS to the image directly -->
@@ -1090,8 +1127,8 @@
             </div>
           </div>
           <div class="col-md-4 mb-4">
-            <div class="card  text-white py-5" style="background-color: #6f42c1;">
-              <div class="card-body " >
+            <div class="card text-white py-5" style="background-color: #6f42c1;">
+              <div class="card-body">
                 <!-- Apply AOS to the image directly -->
                 <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="200">
                 <h5 class="mb-4">Tom Johnson</h5>
@@ -1111,8 +1148,8 @@
             </div>
           </div>
           <div class="col-md-4 mb-0">
-            <div class="card  text-white py-5" style="background-color: #6f42c1;">
-              <div class="card-body " >
+            <div class="card text-white py-5" style="background-color: #6f42c1;">
+              <div class="card-body">
                 <!-- Apply AOS to the image directly -->
                 <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="300">
                 <h5 class="mb-4">Emma Lovelace</h5>
@@ -1133,18 +1170,22 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
+</section>
+</div>
+</div>
 <!-- ---------------------------------------------------ACTIVITIES SECTION ------------------------------------ -->
 <!-- Gallery Section -->
+<div class="card">
+  <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+  ">
 <section class="container my-5" id="activities">
-  <h2 class="text-center mb-4 gaming-heading">Student Activites</h2>
+
+  <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Student Activites</h3>
   <div class="row g-4">
     <div class="col-md-4" data-aos="fade-up">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 1">
+        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" class="img-fluid" alt="Image 1">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
@@ -1173,12 +1214,19 @@
       </div>
     </div>
   </div>
+
     </section>
+  </div>
+</div>
+  
 
 <!-- ----------------------------------------------------- EVENTS --------------------------------------- -->
 <!-- Gallery Section -->
+<div class="card">
+  <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+  ">
 <section class="container my-5" id="eventsgallery">
-  <h2 class="text-center mb-4 gaming-heading">Student Events</h2>
+  <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Student Events</h3>
   <div class="row g-4">
     <div class="col-md-4" data-aos="fade-up">
       <div class="gallery-item">
@@ -1211,36 +1259,47 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </section>
 
   <!-- VFX Section -->
-  <section class="vfx-background" >
-  <h2 class="text-center mb-4 gaming-heading">VFX</h2>
-
+  <section class="vfx-background">
+    <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">VFX</h3>
+  
     <!-- Background Video -->
-    <video class="d-block w-100" autoplay muted loop>
-      <source src="https://3dtrixs.com/wp-content/uploads/2024/06/3Dtrix-Ad-Film-10-Sec.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <video class="d-block w-100" autoplay muted loop>
+        <source src="https://www.animaker.com/Animaker-Home/new-assets/newhome-loop-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="position-relative overflow-hidden pt-4" style="height: 100vh;">
+      <!-- Video Container -->
+      <div class="d-flex justify-content-center align-items-center h-100 w-100">
+        <video class="w-75" autoplay muted loop>
+          <source src="https://www.animaker.com/Animaker-Home/new-assets/newhome-loop-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     <div class="container" id="vfxanimation">
       <div class="row justify-content-center align-items-center" style="height: 100vh;">
         <div class="col-12 text-center">
           <!-- Floating Text -->
-          <h1 class="floating-text" data-aos="fade-up">Welcome to the VFX World</h1>
-
+          <!-- <h1 class="floating-text" data-aos="fade-up">Welcome to the VFX World</h1> -->
+  
           <!-- Description Text -->
           <p class="fade-in mt-4" data-aos="fade-up" data-aos-delay="400">
-            Explore the power of animations and visual effects. In this section, you'll see different dynamic and engaging elements that react to user interactions.
+            <!-- Explore the power of animations and visual effects. In this section, you'll see different dynamic and engaging elements that react to user interactions. -->
           </p>
-
+  
           <!-- Call to Action Button -->
           <a href="#gallery" class="btn btn-lg btn-danger mt-4" data-aos="fade-up" data-aos-delay="600">
             Explore Gallery
           </a>
         </div>
       </div>
-
+  </div>
       <!-- Hover Effect Image Gallery -->
       <div class="row justify-content-center mt-5">
         <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="800">
@@ -1256,60 +1315,72 @@
           <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 4">
         </div>
       </div>
-
+  
       <!-- Animated Circles -->
       <div class="circle circle-1"></div>
       <div class="circle circle-2"></div>
       <div class="circle circle-3"></div>
-
+  
       <!-- Progress Bar -->
       <div class="progress mt-5">
         <div class="progress-bar" role="progressbar"></div>
       </div>
     </div>
   </section>
-
+  
 
   <!-- -----------------------------------GAME ANIMATION SERVIVICES---------------------------- -->
     
   <!-- ----------------------------------------GAMING SECTION------------------------------------- -->
  <!-- Background Video Section -->
- <div class="position-relative overflow-hidden pt-4">
-    <video class="w-100" autoplay muted loop>
-      <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" type="video/mp4" >
+ <div class="position-relative overflow-hidden pt-4" style="height: 100vh;">
+  <!-- Video Container -->
+  <div class="d-flex justify-content-center align-items-center h-100 w-100">
+    <video class="w-75" autoplay muted loop>
+      <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
-    <!-- Text Overlay -->
-    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-      <h1 class="display-3 fw-bold text-shadow">Welcome to the Gaming World</h1>
-      <p class="lead text-shadow">Explore the best gaming videos and tutorials</p>
-      <button class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="setVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        Watch Video
-      </button>
-    </div>
   </div>
 
-  <!-- Video Modal -->
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="videoModalLabel">Gaming Video</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <iframe class="w-100" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+  <!-- Text Overlay -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+    <h1 class="display-3 fw-bold text-shadow">Welcome to the Gaming World</h1>
+    <p class="lead text-shadow">Explore the best gaming videos and tutorials</p>
+    <button class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal" onclick="setVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+      Watch Video
+    </button>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Gaming Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe class="w-100" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
+</div>
 
+<!-- <script>
+  function setVideo(url) {
+    // This will set the video URL dynamically for the modal.
+    const iframe = document.querySelector('#videoModal iframe');
+    iframe.src = url;
+  }
+</script> -->
   <!-- ----------------------------------------MULTIMEDIA ANIMATION ----------------------------- -->
-   
   <!-- Header Section with Animated Text -->
+   <div class="card">
+<div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+">
   <div class="container text-center py-5">
-    <h1 class="animated-text display-4">Welcome to the Multimedia World</h1>
+    <h3 class="animated-text typing-effect" style="color:#ffffff">Welcome to the Multimedia World</h3>
     <p class="lead animated-text">Experience stunning animations, images, and videos with a purple-themed design!</p>
   </div>
 
@@ -1354,7 +1425,8 @@
 
     </div>
   </div>
-
+</div>
+</div>
   <!-- Bootstrap JS & Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
