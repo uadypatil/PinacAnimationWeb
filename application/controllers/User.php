@@ -10,8 +10,12 @@ class User extends CI_Controller
 
     // index function
     function index(){
-        $this->load->view("user/udaytheme");
+        $this->load->view("user/index");
     }   // function ends
+
+    function Home(){
+        $this->load->view("user/index");
+    }
 
     // function to load courses page
     public function Courses(){
