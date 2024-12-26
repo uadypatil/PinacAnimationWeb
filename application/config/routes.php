@@ -93,6 +93,10 @@ $route[''] = "/User/index";
 // $route['aboutus'] = "/User/AboutUs";
 
 // route to load contact us page
+<<<<<<< HEAD
 // $route['contactus'] = "/User/ContactUs";
 
 // $route['home'] = "/User/Home";
+=======
+$route['contactus'] = "/User/ContactUs";
+>>>>>>> 271e232fe4da3c19ebc8c488739c5d5a6510edf3
