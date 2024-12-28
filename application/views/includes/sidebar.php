@@ -8,6 +8,7 @@
     .sidebarlist li {
         margin-top: 50px;
         margin-bottom: 50px;
+        cursor: pointer;
     }
 
     .sidebarlist a {
@@ -29,18 +30,18 @@
 
 <ul class="sidebarlist">
     <li>
-        <a href="">Home</a>
+        <a onclick="show('hero', this)" data-video-src="<?php echo base_url(); ?>assets/images/courses/gaming.mp4">Home</a>
     </li>
     <li>
-        <a href="">Courses</a>
+        <a onclick="show('courses', this)" data-video-src="<?php echo base_url() ; ?>assets/images/courses/3danimation.mp4">Courses</a>
     </li>
     <li>
-        <a href="">Student Gallery</a>
+        <a onclick="show('studentgallery', this)" data-video-src="<?php echo base_url(); ?>assets/images/courses/gaming.mp4">Student Gallery</a>
     </li>
     <li>
-        <a href="">Know Us</a>
+        <a onclick="show('konwus', this)" data-video-src="<?php echo base_url(); ?>assets/images/courses/3danimation.mp4">Know Us</a>
     </li>
     <li>
-        <a href="">Contact Us</a>
+        <a onclick="show('contactus', this)" data-video-src="<?php echo base_url(); ?>assets/images/courses/VFX.mp4">Contact Us</a>
     </li>
 </ul>
