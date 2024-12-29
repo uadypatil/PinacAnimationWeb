@@ -15,7 +15,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            /* background: linear-gradient(135deg, #4e54c8, #8f94fb); */
             color: #fff;
             overflow-x: hidden;
         }
@@ -528,11 +528,11 @@
                             VFX
                         </p> -->
                         <p class="card-text fs-4">The Visual Effects (VFX) course trains individuals to create stunning visuals for films, games, and media. It focuses on blending real-world elements with computer-generated imagery. Students learn skills like compositing, particle effects, and CG integration. The course emphasizes hands-on training with industry-standard tools. Graduates are prepared for careers in entertainment and media production.</p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Covers digital design, compositing, CG integration, and advanced particle effects.</li>
                             <li class="text-start">Includes practical projects to develop industry-relevant skills and a professional portfolio</li>
                             <li class="text-start">Training on tools like Adobe After Effects, Autodesk Maya, and Foundry Nuke</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -559,11 +559,11 @@
                         <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
                         </p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
                             <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
                             <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -591,11 +591,11 @@
                         <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum culpa fugit, veniam cum inventore veritatis ipsam id eligendi, nesciunt porro impedit quod quos nihil dolorum.
                         </p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
                             <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
                             <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -613,7 +613,7 @@
             <div class="carousel-item">
                 <div class="video-container">
                     <video autoplay muted loop>
-                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        <source src="<?php echo base_url('assets/images/courses/vfx.mp4'); ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="card-overlay">
@@ -623,11 +623,11 @@
                         <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
                         </p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
                             <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
                             <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -656,11 +656,11 @@
                         <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
                         </p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
                             <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
                             <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -679,7 +679,7 @@
             <div class="carousel-item">
                 <div class="video-container">
                     <video autoplay muted loop>
-                        <source src="<?php echo base_url('assets/images/courses/3danimation.mp4'); ?>" type="video/mp4">
+                        <source src="<?php echo base_url('assets/images/courses/gaming.mp4'); ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div class="card-overlay">
@@ -689,11 +689,11 @@
                         <p class="card-text fs-4">The 3D animation course is designed to teach the fundamentals of creating dynamic, lifelike animations using cutting-edge tools and techniques. It equips learners with practical skills and prepares them for industry demands.
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores error aperiam odio perferendis quia molestiae in, sunt quisquam accusamus, qui reprehenderit neque eos, esse voluptas!
                         </p>
-                        <ul class="mx-5 fs-5" style="">
+                        <!-- <ul class="mx-5 fs-5">
                             <li class="text-start">Gain expertise in 3D modeling, rigging, texturing, animation, and rendering, covering all essential aspects.</li>
                             <li class="text-start">Work on real-world projects to build a strong portfolio and enhance your practical skills</li>
                             <li class="text-start">Learn industry-standard software like Maya, Blender, and Unreal Engine for professional animation creation</li>
-                        </ul>
+                        </ul> -->
                         <hr>
                         <dl>
                             <dt>Course Duration</dt>
@@ -719,384 +719,340 @@
         </button>
     </div>
 
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+        }
 
+        .card {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            /* background: rgba(0, 0, 0, 0.7); */
+            /* color: white; */
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 1;
+        }
+
+        .text-container h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .text-container p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .text-container button {
+            background-color: #17a2b8;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-container button:hover {
+            background-color: #138496;
+        }
+
+        .card-container:hover .card {
+            transform: translateX(-50%);
+        }
+
+        .card-container:hover .text-container {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .card,
+            .text-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                transform: none;
+                opacity: 1;
+                margin-bottom: 20px;
+            }
+
+            .text-container {
+                transform: translateX(-50%);
+                /* background: rgba(0, 0, 0, 0.8); */
+                color: white;
+                padding: 20px;
+            }
+
+            .card-container:hover .card {
+                transform: none;
+            }
+
+            .card-container:hover .text-container {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Courses</h2>
+
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs justify-content-center" id="courseTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                    role="tab" aria-controls="tab1" aria-selected="true"><span class="text-primary">3D Animation</span></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                    role="tab" aria-controls="tab2" aria-selected="false"><span class="text-primary">VFX</span></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                    role="tab" aria-controls="tab3" aria-selected="false"><span class="text-primary">Gaming</span></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
+                    role="tab" aria-controls="tab4" aria-selected="true"><span class="text-primary">Graphics Designing</span></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button"
+                    role="tab" aria-controls="tab5" aria-selected="false"><span class="text-primary">Motion Graphics</span></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button"
+                    role="tab" aria-controls="tab6" aria-selected="false"><span class="text-primary">Portfolio Development</span></button>
+            </li>
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content mt-3" id="courseTabsContent">
+            <!-- Tab 1 -->
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="3D Animation">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">3D Animation Course</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tab 2 -->
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="VFX">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">VFX</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tab 3 -->
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="Gaming">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">Gaming</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="3D Animation">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">Graphics Designing</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="3D Animation">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">Motion Graphics</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="3D Animation">
+                    </div>
+                    <div class="text-container text-dark p-2">
+                        <p class="fs-2 fw-bold">Portfolio Development</p>
+                        <p class="pb-4  border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima? Eos eveniet velit dignissimos neque numquam, aut, vel natus non labore mollitia reprehenderit praesentium minima.</p>
+                        <dl>
+                            <dt>Course Duration</dt>
+                            <dd>6 months</dd>
+                            <dt>Course Fees</dt>
+                            <dd>50000/-</dd>
+                        </dl>
+                        <a href="" class="button-85" role="button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <style>
-        .all-courses {
+        .bg-image-div {
+            width: 100%;
             height: auto;
-            width: 100%;
-            position: sticky;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("<?php echo base_url() . 'assets/images/courses/vfx.jpg'; ?>");
         }
 
-        .course {
-            position: relative;
-            width: 100%;
-            height: 800px;
-            margin: auto;
-            box-shadow: 0px 0px 4px 2px rgba(255, 255, 255, 0.6);
-            transition: transform 0.5s;
-
-        }
-
-        .bg-course {
-            width: 100%;
-            height: 800px;
-            /* width: 100%;
-        height: 350px; */
-            background-size: cover;
-            filter: brightness(0.6);
-        }
-
-        .course:hover .content {
-            /* background-color: rgba(255, 226, 141, 0.3); */
-            background-color: rgba(255, 255, 255, 0.1);
-
-        }
-
-        .course:hover {
-            transform: translate(0px, -5px);
-        }
-
-        .content {
-            position: absolute;
-            top: 0px;
-            color: rgba(255, 110, 20, 1);
-            padding: 10px;
-            text-align: justify;
-            /* margin: 5px; */
-            height: 100%;
-            transition: background-color 0.6s;
-
-        }
-
-        .content h5,
-        .head-h3 {
-            /* font-size: 12px; */
-
-            font-family: "Cinzel Decorative", serif;
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        .courseimg {
-            width: 70%;
-            height: 200px;
-            display: block;
-            margin: auto;
-        }
-
-        .content p,
-        .head-p {
-            font-family: "Bellefair", serif;
-            font-weight: 400;
-            font-style: normal;
+        .card-overlay2 {
+            /* position: absolute; */
+            /* top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+            /* z-index: 2; */
+            width: 80%;
+            max-width: 80%;
+            height: 80%;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            color: white;
             text-align: center;
         }
-
-        .course:hover .content {
-            /* background-color: rgba(255, 226, 141, 0.3); */
-            background-color: rgba(255, 255, 255, 0.1);
-
-        }
-
-        .course:hover {
-            transform: translate(0px, -5px);
-        }
-
-        .content a {
-            background-color: rgb(255, 110, 20);
-            color: black;
-            border: 2px solid transparent;
-            font-family: "Bellefair", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .content a:hover {
-            background-color: transparent;
-            color: rgba(255, 226, 141);
-            border: 2px solid rgba(255, 226, 141);
-            font-family: "Bellefair", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .video {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-        }
-    </style>
-    <style>
-        /* Video Background Styling */
-        .background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            filter: blur(10px);
-        }
-
-        /* Section Content Styling */
-        .container-fluid {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            padding: 50px 15px;
-            /* Optional padding for better layout */
-        }
-
-        /* Overlay to improve readability */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Dark overlay */
-            z-index: 1;
-        }
     </style>
 
-    <section class="text-center py-5" style="position: relative; overflow: hidden;">
-        <!-- Video Background -->
-        <video class="background-video" autoplay muted loop>
-            <source src="WhatsApp Video 2024-12-17 at 3.35.45 PM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <!-- Dark Overlay -->
-        <div class="overlay"></div>
-
-        <!-- Content Section -->
-        <div class="container-fluid">
-            <h3>Our Courses</h3>
-
-            <div class="all-courses">
-                <div class="row">
-                    <div class="col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <!-- first card for first course -->
-                        <div class="course my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>');"></div>
-                            <div class="content">
-                                <h5 class="mt-5 text-center">Course Name</h5>
-                                <!-- <div class="courseimgdiv">
-                                    <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="" class="courseimg mb-2">
-                                </div> -->
-                                <p style="font-size: 18px;">
-                                    <?php // echo substr($course['course'], 0, 135)  
-                                    ?>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                </p>
-                                <div class="card-list mx-lg-5 mx-md-5 mx-1 my-lg-2 my-md-2 my-1 ">
-                                    <ul>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <center>
-                                    <a class="btn fw-bold " href="">Enroll Now</a>
-                                </center>
-                            </div>
-                        </div>
-
-                        <div class="course my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>');"></div>
-                            <div class="content">
-                                <h5 class="mt-5 text-center">Course Name</h5>
-                                <!-- <div class="courseimgdiv">
-                                    <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="" class="courseimg mb-2">
-                                </div> -->
-                                <p style="font-size: 18px;">
-                                    <?php // echo substr($course['course'], 0, 135)  
-                                    ?>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                </p>
-                                <div class="card-list mx-lg-5 mx-md-5 mx-1 my-lg-2 my-md-2 my-1 ">
-                                    <ul>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <center>
-                                    <a class="btn fw-bold " href="">Enroll Now</a>
-                                </center>
-                            </div>
-                        </div>
-
-                        <div class="course my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>');"></div>
-                            <div class="content">
-                                <h5 class="mt-5 text-center">Course Name</h5>
-                                <!-- <div class="courseimgdiv">
-                                    <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="" class="courseimg mb-2">
-                                </div> -->
-                                <p style="font-size: 18px;">
-                                    <?php // echo substr($course['course'], 0, 135)  
-                                    ?>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                </p>
-                                <div class="card-list mx-lg-5 mx-md-5 mx-1 my-lg-2 my-md-2 my-1 ">
-                                    <ul>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <center>
-                                    <a class="btn fw-bold " href="">Enroll Now</a>
-                                </center>
-                            </div>
-                        </div>
-
-
-
-
+    <div class="bg-image-div">
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
+                <div class="card-overlay2">
+                    <div class="glitch-container">
+                        <h1 class="fs-1">Enquire Now</h1>
                     </div>
-
-                    <div class="col-xlg-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <!-- card for second course -->
-                        <div class=" my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="course w-100 " style="height: 300px;">
-                                <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>'); height: 300px"></div>
-                                <div class="content">
-                                    <h5 class="mt-5 text-center">Course Name</h5>
-                                    <p style="font-size: 18px;">
-                                        <?php // echo substr($course['course'], 0, 135)  
-                                        ?>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                    </p>
-                                    <center>
-                                        <a class="btn fw-bold " href="">Read More</a>
-                                    </center>
-                                </div>
+                    <form>
+                        <div class="row mb-3">
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <!-- Contact Number -->
+                            <div class="col-md-6">
+                                <label for="contact" class="form-label">Contact Number</label>
+                                <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" required>
                             </div>
                         </div>
-
-
-                        <div class="course my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>');"></div>
-                            <div class="content">
-                                <h5 class="mt-5 text-center">Course Name</h5>
-                                <!-- <div class="courseimgdiv">
-                                    <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="" class="courseimg mb-2">
-                                </div> -->
-                                <p style="font-size: 18px;">
-                                    <?php // echo substr($course['course'], 0, 135)  
-                                    ?>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                </p>
-                                <div class="card-list mx-lg-5 mx-md-5 mx-1 my-lg-2 my-md-2 my-1 ">
-                                    <ul>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <center>
-                                    <a class="btn fw-bold " href="">Enroll Now</a>
-                                </center>
-                            </div>
+                        <!-- Address -->
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
                         </div>
-
-                        <div class="course my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>');"></div>
-                            <div class="content">
-                                <h5 class="mt-5 text-center">Course Name</h5>
-                                <!-- <div class="courseimgdiv">
-                                    <img src="<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>" alt="" class="courseimg mb-2">
-                                </div> -->
-                                <p style="font-size: 18px;">
-                                    <?php // echo substr($course['course'], 0, 135)  
-                                    ?>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                </p>
-                                <div class="card-list mx-lg-5 mx-md-5 mx-1 my-lg-2 my-md-2 my-1 ">
-                                    <ul>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                        <li>
-                                            <p class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ratione nesciunt voluptatum sequi libero doloremque.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <center>
-                                    <a class="btn fw-bold " href="">Enroll Now</a>
-                                </center>
-                            </div>
+                        <!-- Course Name -->
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Select Course</label>
+                            <select class="form-select" id="course" required>
+                                <option value="" selected disabled>Select a course</option>
+                                <option value="3D Animation">3D Animation</option>
+                                <option value="VFX">VFX</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="cyber-security">Cyber Security</option>
+                            </select>
                         </div>
-
-
-                        <div class=" my-lg-4 my-md-3 my-sm-2 my-2">
-                            <div class="course w-100 " style="height: 300px;">
-                                <div class="bg-course mx-auto" style=" background-image: url('<?php echo base_url() . 'assets/images/courses/3danimation.jpg'; ?>'); height: 300px"></div>
-                                <div class="content">
-                                    <h5 class="mt-5 text-center">Course Name</h5>
-                                    <p style="font-size: 18px;">
-                                        <?php // echo substr($course['course'], 0, 135)  
-                                        ?>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate explicabo quae deleniti ullam! Amet perspiciatis fugit tempore! Nulla quis amet tempore voluptatem facilis, unde delectus optio doloribus non expedita repellendus?
-                                    </p>
-                                    <center>
-                                        <a class="btn fw-bold " href="">Read More</a>
-                                    </center>
-                                </div>
-                            </div>
+                        <!-- Submit Button -->
+                        <div class="text-center mt-2">
+                            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
                         </div>
-                    </div>
+                    </form>
 
                 </div>
             </div>
-    </section>
+        </div>
+    </div>
 
     <!-- Footer -->
     <?php $this->load->view("includes/footer") ?>

@@ -9,9 +9,18 @@ class User extends CI_Controller
     }
 
     // index function
+<<<<<<< HEAD
     function Home(){
         $this->load->view("user/pinacbackup");
+=======
+    function index(){
+        $this->load->view("user/index");
+>>>>>>> 4ee314ad878e17114755c8f28eb50d7d2bea1653
     }   // function ends
+
+    function Home(){
+        $this->load->view("user/index");
+    }
 
     // function to load courses page
     public function Courses(){

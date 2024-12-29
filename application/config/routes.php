@@ -57,8 +57,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route[''] = "/User/index";
 
 // route to load courses page
-$route['courses'] = "/User/Courses";
-$route['home'] = "/User/Home";
+// $route['courses'] = "/User/Courses";
+
 // route to load 3danimation course page
 // $route['/3danimation'] = "/User/Animation3D";
 
@@ -78,7 +78,7 @@ $route['home'] = "/User/Home";
 // $route['/videoediting'] = "/User/VideoEditing";
 
 // route to load student gallery page
-$route['studentgallery'] = "/User/StudentGallery";
+// $route['studentgallery'] = "/User/StudentGallery";
 
 // route to load activities page
 // $route['/activities'] = "/User/Activities";
@@ -90,7 +90,10 @@ $route['studentgallery'] = "/User/StudentGallery";
 // $route['/testinomials'] = "/User/Testinomials";
 
 // route to load about us page
-$route['aboutus'] = "/User/AboutUs";
+// $route['aboutus'] = "/User/AboutUs";
 
 // route to load contact us page
-$route['contactus'] = "/User/ContactUs";
+// $route['contactus'] = "/User/ContactUs";
+
+// $route['home'] = "/User/Home";
+// $route['contactus'] = "/User/ContactUs";
