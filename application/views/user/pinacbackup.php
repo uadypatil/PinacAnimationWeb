@@ -18,6 +18,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
             margin: 0;
             padding: 0;
             color: #fff;
@@ -739,6 +740,172 @@
         transform: translateX(-100%);
       }
     }
+    /* ------------------------------------------FOOTBAR CSS --------------------------------------- */
+    /* CSS */
+    .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+
+        .glitch-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text {
+            position: relative;
+            /* font-size: 4rem; */
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            animation: glitch-animation 1.5s infinite;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            color: red;
+            z-index: -1;
+        }
+
+        .glitch-text::before {
+            color: red;
+            animation: glitch-before 1.5s infinite linear;
+        }
+
+        .glitch-text::after {
+            color: blue;
+            animation: glitch-after 1.5s infinite linear;
+        }
+
+        @keyframes glitch-animation {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-1px);
+            }
+
+            50% {
+                transform: translateX(1px);
+            }
+
+            75% {
+                transform: translateX(-0.5px);
+            }
+        }
+
+        @keyframes glitch-before {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-3px);
+            }
+
+            50% {
+                transform: translateX(3px);
+            }
+
+            75% {
+                transform: translateX(-2px);
+            }
+        }
+
+        @keyframes glitch-after {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(3px);
+            }
+
+            50% {
+                transform: translateX(-3px);
+            }
+
+            75% {
+                transform: translateX(2px);
+            }
+        }
     </style>
 </head>
 
@@ -751,7 +918,7 @@
     </button>
 
     <!-- Logo on the left -->
-    <img src="pinac-removebg-preview.png" alt="Brand Logo" style="width: 80px;" class="ms-3">
+    <img src="pinac-removebg-preview.png" alt="Brand Logo" loading="lazy" style="width: 80px;" class="ms-3">
 
     <!-- Navbar content, centered -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -793,7 +960,9 @@
           </ul>
         </li>
       </ul>
-    </div>
+      <button type="button" class="animated-button" data-bs-toggle="modal" data-bs-target="#addressModal">
+  Inquiry
+</button>    </div>
   </nav>
 </header>
 
@@ -801,7 +970,7 @@
 <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <video class="d-block w-100" autoplay muted loop>
+            <video class="d-block w-100" autoplay muted loop preload="auto" loading="lazy">
                 <source src="https://assets.mixkit.co/videos/32982/32982-720.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
@@ -811,8 +980,18 @@
             </div>
         </div>
         <div class="carousel-item">
-            <video class="d-block w-100" autoplay muted loop>
+            <video class="d-block w-100" autoplay muted loop preload="auto">
                 <source src="https://assets.mixkit.co/videos/18140/18140-720.mp4" type="video/mp4">Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption jumping-heading">
+                <h2>Master Animation</h2>
+                <p class="pa">Join our advanced courses and become an expert.</p>
+                <button class="animated-button">Join the Course</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video class="d-block w-100" autoplay muted loop preload="auto">
+                <source src="https://videos.pexels.com/video-files/854228/854228-hd_1920_1080_30fps.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <div class="carousel-caption jumping-heading">
                 <h2>Master Animation</h2>
@@ -844,7 +1023,7 @@
 
     <!-- Embedded Google Map -->
     <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4291.745453141256!2d73.7898!3d20.0000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf67f68a1d6db%3A0xa97a1eaa3fd0e36b!2sNashik%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1725395799894!5m2!1sen!2sin" width="400" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4291.745453141256!2d73.7898!3d20.0000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf67f68a1d6db%3A0xa97a1eaa3fd0e36b!2sNashik%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1725395799894!5m2!1sen!2sin" loading="lazy" width="400" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         </div>
 
@@ -872,8 +1051,8 @@
 
  <!-- Gallery Section -->
   <div class="card">
-    <h3 id="typing-effect" class="text-center pt-5" style=" font-weight: bold;">Animations</h3>
-    <div class="scrolling-wrapper">
+    <h3 class="text-center pt-5 typing-effect" style="color:#61a0e7">Animations</h3>
+    <!-- <div class="scrolling-wrapper">
       <div class="scrolling-images">
         <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" alt="Image 1">
         <img src="https://wallpaperaccess.com/full/1346596.jpg" alt="Image 2">
@@ -881,99 +1060,100 @@
         <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Image 4">
         <img src="https://via.placeholder.com/300x200?text=Image+5" alt="Image 5">
       </div>
-    </div>
+    </div>  -->
 
-    <!-- <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner"> -->
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
         <!-- First Slide: Shows 3 images -->
-        <!-- <div class="carousel-item active">
-            <div class="row"> -->
+      <div class="carousel-item active">
+            <div class="row"> 
                 <!-- Gallery Item 1 -->
-                <!-- <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="gallery-item">
-                        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body"> -->
-                            <!-- <h5 class="card-title">HTML Tutorial</h5>
-                            <p class="card-text pa">Learn the basics of HTML and how to build a webpage.</p> -->
-                        <!-- </div>
+                        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" loading="lazy class="card-img-top" alt="HTML Tutorial">
+                        <div class="card-body"> 
+                         <!-- <h5 class="card-title">HTML Tutorial</h5> -->
+                            <!-- <p class="card-text pa">Learn the basics of HTML and how to build a webpage.</p> -->
+                         </div>
                     </div>
-                </div> -->
+                </div> 
                 <!-- Gallery Item 2 -->
-                <!-- <div class="col-md-4 mb-4">
+               <div class="col-md-4 mb-4">
                     <div class="gallery-item">
-                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body"> -->
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" loading="lazy" class="card-img-top" alt="CSS Tutorial">
+                        <div class="card-body"> 
                             <!-- <h5 class="card-title">CSS Tutorial</h5>
                             <p class="card-text">Explore styling and layout techniques using CSS.</p> -->
-                        <!-- </div>
+                         </div>
                     </div>
-                </div> -->
+                </div> 
                 <!-- Gallery Item 3 -->
-                <!-- <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="gallery-item">
-                        <img src="https://images.squarespace-cdn.com/content/v1/508e7487e4b047ba54daaef2/1648467721123-44E9JHIXR47S55IC6M3R/Vinyl+Collector+by+Sarah+Jarrettsm.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body"> -->
-                            <!-- <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p> -->
-                        <!-- </div>
+                        <img src="https://images.squarespace-cdn.com/content/v1/508e7487e4b047ba54daaef2/1648467721123-44E9JHIXR47S55IC6M3R/Vinyl+Collector+by+Sarah+Jarrettsm.jpg" loading="lazy class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body"> 
+                      <!-- <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p> --> 
+                      </div>
                     </div>
                 </div>
-            </div> -->
-        <!-- </div> -->
+            </div> 
+        </div>
         <!-- Second Slide: Shows 3 images -->
-        <!-- <div class="carousel-item">
-            <div class="row"> -->
-                <!-- Gallery Item 4 -->
-                <!-- <div class="col-md-4 mb-4">
+       <div class="carousel-item">
+            <div class="row"> 
+               <!-- Gallery Item 4 --> 
+              <div class="col-md-4 mb-4">
                     <div class="gallery-item">
-                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="HTML Tutorial">
-                        <div class="card-body"> -->
-                            <!-- <h5 class="card-title">HTML Tutorial</h5>
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" loading="lazy" class="card-img-top" alt="HTML Tutorial">
+                        <div class="card-body"> 
+                         <!-- <h5 class="card-title">HTML Tutorial</h5>
                             <p class="card-text">Learn the basics of HTML and how to build a webpage.</p> -->
-                        <!-- </div>
+                        </div>
                     </div>
-                </div> -->
+                </div> 
                 <!-- Gallery Item 5 -->
-                <!-- <div class="col-md-4 mb-4">
+                 <div class="col-md-4 mb-4">
                     <div class="gallery-item">
                         <img src="https://images.squarespace-cdn.com/content/v1/508e7487e4b047ba54daaef2/1648467721123-44E9JHIXR47S55IC6M3R/Vinyl+Collector+by+Sarah+Jarrettsm.jpg" class="card-img-top" alt="CSS Tutorial">
-                        <div class="card-body"> -->
-                            <!-- <h5 class="card-title">CSS Tutorial</h5>
-                            <p class="card-text">Explore styling and layout techniques using CSS.</p> -->
-                        <!-- </div>
+                        <div class="card-body">
+                             <!-- <h5 class="card-title">CSS Tutorial</h5>
+                            <p class="card-text">Explore styling and layout techniques using CSS.</p>  -->
+                        </div>
                     </div>
-                </div> -->
-                <!-- Gallery Item 6 -->
-                <!-- <div class="col-md-4 mb-4">
+                </div>
+                 <!-- Gallery Item 6 --> 
+                 <div class="col-md-4 mb-4">
                     <div class="gallery-item">
-                        <img src="https://wallpaperaccess.com/full/1346596.jpg" class="card-img-top" alt="JavaScript Tutorial">
-                        <div class="card-body"> -->
-                            <!-- <h5 class="card-title">JavaScript Tutorial</h5>
-                            <p class="card-text">Dive into JavaScript to create interactive websites.</p> -->
-                        <!-- </div>
+                        <img src="https://wallpaperaccess.com/full/1346596.jpg" loading="lazy" class="card-img-top" alt="JavaScript Tutorial">
+                        <div class="card-body">
+                             <!-- <h5 class="card-title">JavaScript Tutorial</h5>
+                            <p class="card-text">Dive into JavaScript to create interactive websites.</p>  -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Carousel Controls -->
-    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-    <!-- </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
     <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
-</div> -->
+</div> 
     </div>
-<!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ -->
+ <!-- -----------------------------------------ASSIGNMENT SECTION------------------------------ --> 
    <!-- Carousel Section -->
 <!-- Carousel Section -->
 <!-- Carousel Section -->
-<div class="card">
-  <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
-  ">
+<!-- <div class="card">
+  <div class="card-body">
+  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
+  " -->
 <section class="container mt-5">
-  <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Our Assignments</h3>
+  <h3 class="text-center pt-5 typing-effect" style="color:#61a0e7">Our Assignments</h3>
 
   <div class="carousal-section" data-aos="fade-up">
     <!-- Slider main container -->
@@ -1040,12 +1220,12 @@
     </div>
   </div>
 </section>
-</div>
-</div>
+<!-- </div>
+</div> -->
 
 <!-- -------------------------------------GALLERY SECTION-------------------------------------------- -->
 <!-- Gallery Section -->
-<section class="container py-5" id="threed">
+<section class="container py-5 mt-4 bg-light" id="threed" style="border-radius:5%">
   <h3 class="text-center pt-5 typing-effect" style="color:#61a0e7">Animated Photo Gallery</h3>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Show only 6 images initially -->
@@ -1073,19 +1253,19 @@
       <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 7">
     </div>
     <div class="col gallery-item p-4" id="image8" style="display: none;border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 8">
+      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 8" loading="lazy">
     </div>
     <div class="col gallery-item p-4" id="image9" style="display: none;border:0;">
-      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 9">
+      <img src="https://th.bing.com/th/id/R.5e91345f89bf20d3d561647ab1e0547e?rik=KbBGOIZq13QK0w&riu=http%3a%2f%2fwww.animationkolkata.com%2fblog%2fwp-content%2fuploads%2f2021%2f11%2fadmec-internal-different-types-of-animation.jpg&ehk=Au7%2b61J5WD6R7I2u9P72xB3D0e9CHuFnUWXaBAlPQHY%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Image 9" loading="lazy">
     </div>
     <div class="col gallery-item p-4" id="image10" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+10" class="gallery-img" alt="Image 10">
+      <img src="https://via.placeholder.com/400x300?text=Image+10" class="gallery-img" alt="Image 10" loading="lazy">
     </div>
     <div class="col gallery-item p-4" id="image11" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+11" class="gallery-img" alt="Image 11">
+      <img src="https://via.placeholder.com/400x300?text=Image+11" class="gallery-img" alt="Image 11" loading="lazy">
     </div>
     <div class="col gallery-item p-4" id="image12" style="display: none;border:0;">
-      <img src="https://via.placeholder.com/400x300?text=Image+12" class="gallery-img" alt="Image 12">
+      <img src="https://via.placeholder.com/400x300?text=Image+12" class="gallery-img" alt="Image 12"  loading="lazy">
     </div>
   </div>
 
@@ -1110,7 +1290,7 @@
               <div class="card-body">
                 <!-- Apply AOS to the image directly -->
                 <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="100">
-                <h5 class="mb-4">Veronica Smith</h5>
+                <h5 class="mb-4">Sonal</h5>
                 <p class="mb-4">Backend Developer</p>
                 <ul class="list-unstyled mb-0">
                   <a href="#!" class="px-1">
@@ -1130,8 +1310,8 @@
             <div class="card text-white py-5" style="background-color: #6f42c1;">
               <div class="card-body">
                 <!-- Apply AOS to the image directly -->
-                <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="200">
-                <h5 class="mb-4">Tom Johnson</h5>
+                <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="200" loading="lazy">
+                <h5 class="mb-4">Shubham</h5>
                 <p class="mb-4">Digital Marketing Analyst</p>
                 <ul class="list-unstyled mb-0">
                   <a href="#!" class="px-1">
@@ -1152,7 +1332,7 @@
               <div class="card-body">
                 <!-- Apply AOS to the image directly -->
                 <img class="rounded-circle shadow-2-strong mb-5" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" alt="avatar" style="width: 100px;" data-aos="fade-up" data-aos-delay="300">
-                <h5 class="mb-4">Emma Lovelace</h5>
+                <h5 class="mb-4">Uday</h5>
                 <p class="mb-4">Web Designer</p>
                 <ul class="list-unstyled mb-0">
                   <a href="#!" class="px-1">
@@ -1176,91 +1356,88 @@
 </div>
 <!-- ---------------------------------------------------ACTIVITIES SECTION ------------------------------------ -->
 <!-- Gallery Section -->
-<div class="card">
-  <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
-  ">
-<section class="container my-5" id="activities">
 
-  <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Student Activites</h3>
+<section class="container py-5 mt-4 bg-light" id="activities" style="border-radius:5%">
+
+
+  <h3 class="text-center pt-5 typing-effect" style="color:purple" >Student Activites</h3>
   <div class="row g-4">
     <div class="col-md-4" data-aos="fade-up">
       <div class="gallery-item">
-        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" class="img-fluid" alt="Image 1">
+        <img src="https://mikesreda.com/wp-content/uploads/2017/09/Gallery_16.jpg" class="img-fluid" alt="Image 1" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
       <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5">
+        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
       <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6">
+        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6" loading="lazy">
       </div>
     </div>
   </div>
 
     </section>
-  </div>
-</div>
-  
+ 
 
 <!-- ----------------------------------------------------- EVENTS --------------------------------------- -->
 <!-- Gallery Section -->
-<div class="card">
+<!-- <div class="card">
   <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
-  ">
+  "> -->
 <section class="container my-5" id="eventsgallery">
   <h3 class="text-center pt-5 typing-effect" style="color:#ffffff">Student Events</h3>
   <div class="row g-4">
     <div class="col-md-4" data-aos="fade-up">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 1">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 1" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 2" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 3" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
       <div class="gallery-item">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4">
+        <img src="https://www.gamedesigning.org/wp-content/uploads/2015/10/the-best-animation-companies.jpg" class="img-fluid" alt="Image 4" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
       <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5">
+        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 5" loading="lazy">
       </div>
     </div>
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
       <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6">
+        <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Image 6" loading="lazy">
       </div>
     </div>
   </div>
-</div>
-</div>
+<!-- </div>
+</div> -->
 </section>
 
   <!-- VFX Section -->
@@ -1269,7 +1446,7 @@
   
     <!-- Background Video -->
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-      <video class="d-block w-100" autoplay muted loop>
+      <video class="d-block w-100" autoplay muted loop preload="auto" loading="lazy">
         <source src="https://www.animaker.com/Animaker-Home/new-assets/newhome-loop-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -1302,17 +1479,17 @@
   </div>
       <!-- Hover Effect Image Gallery -->
       <div class="row justify-content-center mt-5">
-        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="800">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 1">
+        <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="800" loading="lazy">
+          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 1" loading="lazy">
         </div>
         <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1000">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 2">
+          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 2" loading="lazy">
         </div>
         <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1200">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 3">
+          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 3" loading="lazy">
         </div>
         <div class="col-md-3 col-6 hover-effect" data-aos="fade-up" data-aos-delay="1400">
-          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 4">
+          <img src="https://via.placeholder.com/400x300" class="img-fluid border-animate" alt="Sample Image 4" loading="lazy">
         </div>
       </div>
   
@@ -1336,7 +1513,7 @@
  <div class="position-relative overflow-hidden pt-4" style="height: 100vh;">
   <!-- Video Container -->
   <div class="d-flex justify-content-center align-items-center h-100 w-100">
-    <video class="w-75" autoplay muted loop>
+    <video class="w-75" autoplay muted loop preload="auto" loading="lazy">
       <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -1361,7 +1538,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <iframe class="w-100" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="w-100" height="400" src="https://video-previews.elements.envatousercontent.com/h264-video-previews/ca600258-de54-4b57-9bd3-6293035af54f/38356188.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -1376,9 +1553,9 @@
 </script> -->
   <!-- ----------------------------------------MULTIMEDIA ANIMATION ----------------------------- -->
   <!-- Header Section with Animated Text -->
-   <div class="card">
+   <!-- <div class="card">
 <div class="card-body"  style="background: linear-gradient(to right, #6a0dad, #ff7f32, #1e3a8a);
-">
+"> -->
   <div class="container text-center py-5">
     <h3 class="animated-text typing-effect" style="color:#ffffff">Welcome to the Multimedia World</h3>
     <p class="lead animated-text">Experience stunning animations, images, and videos with a purple-themed design!</p>
@@ -1391,7 +1568,7 @@
       <!-- Image 1 with Hover Animation -->
       <div class="col">
         <div class="card image-container">
-          <img src="https://motiongility.com/wp-content/uploads/2023/08/Role-of-animation-in-boosting-us-1-768x432.png" class="card-img-top" alt="Image 1">
+          <img src="https://motiongility.com/wp-content/uploads/2023/08/Role-of-animation-in-boosting-us-1-768x432.png" loading="lazy" class="card-img-top" alt="Image 1">
           <div class="card-body">
             <h5 class="card-title">Image 1</h5>
             <p class="card-text">A beautiful visual representation of multimedia.</p>
@@ -1402,7 +1579,7 @@
       <!-- Image 2 with Hover Animation -->
       <div class="col">
         <div class="card image-container">
-          <img src="https://motiongility.com/wp-content/uploads/2023/08/Multimedia-Animation-01-1-1-1.png" class="card-img-top" alt="Image 2">
+          <img src="https://motiongility.com/wp-content/uploads/2023/08/Multimedia-Animation-01-1-1-1.png" loading="lazy" class="card-img-top" alt="Image 2">
           <div class="card-body">
             <h5 class="card-title">Image 2</h5>
             <p class="card-text">Another stunning multimedia graphic for your experience.</p>
@@ -1414,18 +1591,19 @@
       <div class="col">
         <div class="card">
           <div class="video-embed">
-            <iframe src="https://youtu.be/22VjkLHco6o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://videos.pexels.com/video-files/2759477/2759477-uhd_2560_1440_30fps.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
           </div>
           <div class="card-body">
             <h5 class="card-title">Video 1</h5>
             <p class="card-text">Watch this amazing gaming video right now!</p>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
 
     </div>
   </div>
 </div>
+<?php $this->load->view("includes/footer") ?>
 </div>
   <!-- Bootstrap JS & Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -1436,6 +1614,28 @@
       const iframe = document.querySelector('.modal-body iframe');
       iframe.src = url;
     }
+
+    self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open('video-cache').then((cache) => {
+            return cache.addAll([
+                '/videos/video1.mp4',
+                '/videos/video2.mp4'
+            ]);
+        })
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    if (event.request.url.includes('.mp4')) {
+        event.respondWith(
+            caches.match(event.request).then((cachedResponse) => {
+                return cachedResponse || fetch(event.request);
+            })
+        );
+    }
+});
+
   </script>
 <!-- -------------------------------------------------------END------------------------------------------------ -->
  

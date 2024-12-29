@@ -58,7 +58,7 @@ $route[''] = "/User/index";
 
 // route to load courses page
 $route['courses'] = "/User/Courses";
-
+$route['home'] = "/User/Home";
 // route to load 3danimation course page
 // $route['/3danimation'] = "/User/Animation3D";
 
